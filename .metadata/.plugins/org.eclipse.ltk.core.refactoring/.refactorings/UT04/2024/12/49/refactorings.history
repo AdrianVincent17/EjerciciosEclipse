@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Redenominar el tipo «boletin.Horas» como «Time»&#x0D;&#x0A;- Proyecto original: «UT04»&#x0D;&#x0A;- Elemento original: «boletin.Horas»&#x0D;&#x0A;- Elemento redenominado: «boletin.Time»&#x0D;&#x0A;- Actualizar referencias al elemento refactorizado&#x0D;&#x0A;- Actualizar apariciones textuales en comentarios y cadenas de texto" description="Redenominar el tipo «Horas»" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;boletin{Horas.java[Horas" matchStrategy="1" name="Time" qualified="false" references="true" similarDeclarations="false" stamp="1733135980027" textual="false" version="1.0"/>
+</session>

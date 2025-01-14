@@ -1,0 +1,161 @@
+package estudiantes;
+
+public class Estudiante {
+
+	//Atributos
+
+	private String nombre;
+	private int nota1;
+	private int nota2;
+	private int nota3;
+
+
+	/**
+	 * Constructor
+	 * @param nombre del alunno
+	 * @param nota1 primera evaluacion
+	 * @param nota2 segunda evaluacion
+	 * @param nota3 tercera evaluacion
+	 */
+
+	public Estudiante(String nom, int not1, int not2, int not3) {
+
+		nombre = nom;
+		nota1 = not1;
+		nota2 = not2;
+		nota3 = not3;
+	}
+
+	/**
+	 * Devuelve el nombre del alumno
+	 * @return el nombre del estudiante
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+
+
+
+	/**
+	 * Establece el nombre del estudiante
+	 * @param nombre el nombre a establecer
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+
+
+	/**
+	 * Devuelve la primera nota
+	 * @return la nota1
+	 */
+	public int getNota1() {
+		return nota1;
+	}
+
+
+
+
+	/**
+	 * Establece la primera nota
+	 * @param nota1 la nota1 a establecer
+	 */
+	public void setNota1(int nota1) {
+		this.nota1 = nota1;
+	}
+
+
+
+
+	/**
+	 * Devuelve la segunda nota 
+	 * @return la nota2
+	 */
+	public int getNota2() {
+		return nota2;
+	}
+
+
+
+
+	/**
+	 * Establece la segunda nota
+	 * @param nota2 la nota2 a establecer
+	 */
+	public void setNota2(int nota2) {
+		this.nota2 = nota2;
+	}
+
+
+
+
+	/**
+	 * Devuelve la tercera nota
+	 * @return la nota3
+	 */
+	public int getNota3() {
+		return nota3;
+	}
+
+
+
+
+	/**
+	 * Establece la tercera nota
+	 * @param nota3 la nota3 a establecer
+	 */
+
+	public void setNota3(int nota3) {
+		this.nota3 = nota3;
+
+	}
+
+
+	/**
+	 * 
+	 * @param nota
+	 * @return
+	 */
+	private int validarnota(int nota) {
+
+		if(nota<0 || nota>10)
+			return 0;
+		return nota;
+	}
+
+	/**
+	 * Funcion que devuelve la nota media del estudiante
+	 * @param nota1 primera ev
+	 * @param nota2 segunda ev
+	 * @param nota3 tercera ev
+	 * @return Nota media del estudiante
+	 */
+	public static double promedio(int nota1, int nota2, int nota3) {
+
+		return (nota1+nota2+nota3)/3.0;
+	}
+	
+	private boolean aprueba(int n) {
+		
+		return promedio(n)>=5;
+	}
+
+	/*
+	 * Muestra informacion sobre los alumnos 
+	 */
+
+	public void mostraestudiante() {
+
+		System.out.println("Nombre: "+nombre);
+		System.out.println("Nota 1: "+nota1);
+		System.out.println("Nota 2: "+nota2);
+		System.out.println("Nota 3: "+nota3);
+		System.out.println("Media de las notas: "+promedio(nota1, nota2, nota3)+"\n");
+	}
+
+
+
+}

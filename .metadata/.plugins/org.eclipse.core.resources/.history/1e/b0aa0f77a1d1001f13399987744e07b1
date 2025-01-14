@@ -1,0 +1,51 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class Ejemplo06 {
+	
+	final static int TAM=5;
+
+	public static void main(String[] args) {
+		
+		Scanner teclado=new Scanner(System.in);
+		
+		try {
+			
+			int[] vector=new int[TAM];
+			
+			System.out.println("Introduce "+TAM+" valores de tipo entero...");
+			
+			for(int i=0; i<vector.length; i++) {
+				System.out.print("["+(i+1)+"] Dime un valor: ");
+				vector[i]=teclado.nextInt();
+			}
+			
+			
+			//Mostramos el mayor valor introducido
+			int mayor,menor;
+			mayor=menor=vector[0];
+			for(int i=1; i<vector.length; i++) {
+				
+				if(mayor<vector[i])
+					mayor=vector[i];
+				
+				if(menor>vector[i])
+					menor=vector[i];
+				
+			}	
+			
+			System.out.println("\n> Mayor: "+mayor+"\n> Menor: "+menor);
+			
+			
+			
+		}catch(Exception lupita) {
+			System.out.println("Error, dato no valido");
+			
+		}finally {
+			teclado.close();	
+		}
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package estudiantes;
+
+public class Estudiantetest {
+
+	public static void main(String[] args) {
+		
+		Estudiante e1= new Estudiante("Adrian",6,7,8);
+		Estudiante e2= new Estudiante("Angel",7,6,9);
+		Estudiante e3= new Estudiante("Lucas",8,5,10);
+		
+		e1.mostraestudiante();
+		e2.mostraestudiante();
+		e3.mostraestudiante();
+
+	}
+
+}

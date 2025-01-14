@@ -1,0 +1,35 @@
+package ejmplos;
+
+public class Bienvenida2 {
+	
+	/**
+	 * Procedimiento que muestra por pantalla un texto con un saludo
+	 * @param nombre nombre de la persona a la que voy a saludar
+	 */
+	
+	public static void saluda(String nombre) {
+		 
+		//Creamos el mensaje o lo que se vaya a mostrar luego en el main
+		System.out.println("Hola "+nombre+"!");
+		System.out.println("Bienvenido/a al C.E.S Vega Media.");
+		System.out.println("Este curso aprenderas a programar en Java.");
+		System.out.println("Espero que te guste!\n");
+	}
+
+	public static void main(String[] args) {
+		
+		//hacemos una llamada al metodo (procedimiento)
+		saluda("Adrian");
+		saluda("Erik");
+		saluda("Jesus");
+		saluda("Angel");
+		saluda("Alvaro");
+		saluda("Alberto");
+		saluda("Adam");
+		saluda("Marlon");
+		saluda("Maria Consuelo");
+		saluda("Elena");
+		
+	}
+
+}

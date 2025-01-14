@@ -1,0 +1,32 @@
+package ejmplos;
+
+public class Bienvenida2 {
+	
+	/**
+	 * 
+	 * @param nombre
+	 */
+	
+	public static void saluda(String nombre) {
+		
+		System.out.println("Hola "+nombre+"!");
+		System.out.println("Bienvenido/a al C.E.S Vega Media.");
+		System.out.println("Este curso aprenderas a programar en Java.");
+		System.out.println("Espero que te guste!\n");
+	}
+
+	public static void main(String[] args) {
+		
+		//hacemos una llamada al metodo (procedimiento)
+		saluda("Adrian");
+		saluda("Erik");
+		saluda("Jesus");
+		saluda("Angel");
+		saluda("Alvaro");
+		saluda("Alberto");
+		saluda("Adam");
+		saluda("Marlon");
+		
+	}
+
+}

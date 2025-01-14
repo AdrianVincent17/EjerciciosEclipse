@@ -1,0 +1,41 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class Ejemplo06 {
+	
+	final static int numeros=5;
+
+	public static void main(String[] args) {
+		
+		Scanner teclado=new Scanner(System.in);
+		
+		try {
+			
+			int[] vector=new int[numeros];
+			
+			System.out.println("dime un numero: ");
+			
+			for(int i=0; i<vector.length; i++) {
+				System.out.print("["+(i+1)+"] Dime un valor: ");
+				vector[i]=teclado.nextInt();
+			}
+			
+			System.out.print("Valores introducidos: ");
+			for(int i=0; i<vector.length; i++) {
+				
+				
+				System.out.print(vector[i]+" ");	
+			}
+			System.out.println();
+			
+		}catch(Exception lupita) {
+			System.out.println("Error, dato no valido");
+			
+		}finally {
+			
+		}teclado.close();
+
+	}
+
+}
