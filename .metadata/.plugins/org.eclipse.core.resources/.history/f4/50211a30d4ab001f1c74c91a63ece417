@@ -1,0 +1,40 @@
+package ligabasket;
+
+public class Equipotest {
+
+	public static void main(String[] args) {
+		
+		//instanciamos y declaramos e inizializamos las clases
+		Equipo e1=new Equipo(1,"Real Madrid","Madrid","WiZink Center");
+		Equipo e2=new Equipo(2,"FC Barcellona","Barcelona","Palau Blaugrana");
+		Equipo e3=new Equipo(3,"UCAM C.B","Murcia","Palacio de los Deportes");
+		
+		//Mostramos la informacion del equipo
+		e1.mostrarequipo();
+		System.out.println();
+		
+		e2.mostrarequipo();
+		System.out.println();
+		
+		e3.mostrarequipo();
+		System.out.println();
+		
+		//Esteablecemos otro nombre para el pabellon del Real Madrid
+		e1.setPabellon("La Caja Magica");
+		
+		//cambiamos el nombre del tercer Equipo creado
+		e3.setNombre("UCAM Club Baloncesto");
+		
+		//mostramoos la informacion actualizada de los equipos que han sufrido cambios
+		e1.mostrarequipo();
+		System.out.println();
+		e3.mostrarequipo();
+		
+		//Mostramos dotos concretos de los equipos
+		e2.getNombre();
+		e2.getPabellon();
+		
+
+	}
+
+}

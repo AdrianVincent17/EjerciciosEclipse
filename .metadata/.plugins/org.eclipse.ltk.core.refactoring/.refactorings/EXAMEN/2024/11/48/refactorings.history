@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Mover paquete «examen» a «UT03/src»&#x0D;&#x0A;- Proyecto original: «EXAMEN»&#x0D;&#x0A;- Elemento destino: «UT03/src»&#x0D;&#x0A;- Elemento original: «EXAMEN/src/examen»&#x0D;&#x0A;- Actualizar referencias al elemento refactorizado" description="Mover paquete" destination="=UT03/src" element1="/src&lt;examen" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1732710141552" version="1.0"/>
+</session>
