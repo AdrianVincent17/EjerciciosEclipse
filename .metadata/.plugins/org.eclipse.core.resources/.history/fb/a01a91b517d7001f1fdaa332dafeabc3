@@ -1,0 +1,70 @@
+package arrays.ejercicios;
+
+public class Ejercicio03 {
+	
+	final static int TAM=5;
+	
+	/**
+	 * 
+	 * @param array
+	 * @return
+	 */
+	
+	public static int mayor(int[] array) {
+		
+		int mayor=array[0];
+		
+		for(int i=0; i<array.length; i++) {
+			if(mayor<array[i])
+				mayor=array[i];
+		}
+		return mayor;
+				
+		
+	}
+	
+	/**
+	 * 
+	 * @param array
+	 * @return
+	 */
+	
+	public static int menor(int[] array) {
+		
+		int menor=array[0];
+		
+		for(int i=0; i<array.length; i++) {
+			if(menor>array[i])
+				menor=array[i];
+		}
+		return menor;
+				
+		
+	}
+	
+	/**
+	 * 
+	 * @param array
+	 * @return
+	 */
+	public static double media(int[] array) {
+		
+		int suma=0;
+		
+		for(int i=0; i<array.length; i++) {
+			suma+=array[i];
+		}	
+			return (double)suma/array.length;
+			
+		
+		
+		
+	}
+
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
