@@ -53,7 +53,7 @@ public class Ejercicio07 {
 		tabla[posicion]=nuevo;
 		
 		//mostramos los elementos almacenados
-		System.out.println("Tabla: ");
+		System.out.print("Tabla: ");
 		for(int i=0; i<tabla.length; i++)
 			System.out.print(tabla[i]+" ");
 	}
