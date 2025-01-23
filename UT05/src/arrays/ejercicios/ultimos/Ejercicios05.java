@@ -97,8 +97,9 @@ public class Ejercicios05 {
 		System.out.print("\nMenor con funcion: "+menor(A));
 		System.out.print("\nMedia con funcion: "+media(A));
 		
-		System.out.print("\nMayor sin funcion: "+ordenav2(A[A.length-1]));
-		System.out.print("\nMenor sin funcion: "+menor(A));
+		ordenav2(A);
+		System.out.print("\nMayor sin funcion: "+A[A.length-1]);
+		System.out.print("\nMenor sin funcion: "+A[0]);
 		System.out.print("\nMedia sin funcion: "+media(A));
 	}
 
