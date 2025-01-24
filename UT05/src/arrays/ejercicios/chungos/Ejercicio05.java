@@ -27,7 +27,7 @@ public class Ejercicio05 {
 		}
 	}
 
-	final static int TAM=5;
+	final static int TAM=6;
 
 	public static void main(String[] args) {
 

@@ -1,0 +1,46 @@
+package arrays.ejercicios.chungos;
+
+import java.util.Scanner;
+
+public class Ejercicio01 {
+
+	final static int TAM=5;
+	
+	/**
+	 * Procedimiento que muestra por pantalla un array de numeros enteros pasados por parametros 
+	 * @param array de numeros enteros
+	 */
+	
+	public static void mostrar(int [] array) {
+		
+		for(int i=0; i<array.length; i++) {
+			System.out.println(array[i]+" ");
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner teclado=new Scanner(System.in);
+		int []A=new int [TAM];
+		int []B=new int [TAM];
+		
+		try {
+			
+			System.out.println("Vector A:");
+			for(int i=0; i<A.length; i++) {
+				System.out.print("valor["+(i+1)+"]: ");
+				A[i]=teclado.nextInt();
+			}
+			
+			
+			
+			
+		}catch(Exception e) {
+			System.out.println("Error, dato introducido no valido");
+		}finally {
+			teclado.close();
+		}
+
+	}
+
+}
