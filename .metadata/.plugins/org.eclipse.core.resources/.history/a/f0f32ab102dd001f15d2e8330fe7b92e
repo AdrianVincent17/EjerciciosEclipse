@@ -1,0 +1,28 @@
+package date;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Edad {
+
+	public static void main(String[] args) {
+		
+		Date hoy= new Date();
+		
+		SimpleDateFormat formato;
+		
+		formato=new SimpleDateFormat("yyyy");
+		String year=formato.format(hoy);
+		
+		formato=new SimpleDateFormat("MM");
+		String month=formato.format(hoy);
+		
+		formato=new SimpleDateFormat("dd");
+		String day=formato.format(hoy);
+		
+		System.out.println("Fecha actual: "+day+"/"+month+"/"+year);
+		
+
+	}
+
+}
