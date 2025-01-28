@@ -1,0 +1,40 @@
+package matrices.ejercicios;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Ejericios05 {
+	final static int TAM=3;
+
+	public static void mostrarmatriz(int [][] a) {
+
+		for(int i=0; i<a.length; i++) {
+			for(int j=0; j<a[i].length; j++)
+				System.out.print(a[i][j]+"\t");
+			System.out.println();
+		}
+	}
+
+	public static void main(String[] args) {
+
+		int [][]A, B, C =new int [TAM][TAM];
+		
+		Scanner sc=new Scanner(System.in);
+		
+		try {
+			
+			System.out.println("Matriz A "+TAM+"x"+TAM+":");
+			
+		}catch(InputMismatchException e) {
+			System.out.println("Error");
+		}finally {
+			sc.close();
+		}
+		
+
+
+		
+
+	}
+
+}
