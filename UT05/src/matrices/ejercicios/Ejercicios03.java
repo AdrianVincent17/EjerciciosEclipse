@@ -34,7 +34,7 @@ public class Ejercicios03 {
 					suma+=matriz[i][j];
 				}
 				
-				System.out.println( "----> suma "+suma);//al final de cada fila saldra la suma total de todas las columnas de esa fila
+				System.out.println("----> suma "+suma);//al final de cada fila saldra la suma total de todas las columnas de esa fila
 			}
 			
 		}catch(InputMismatchException lupita) {

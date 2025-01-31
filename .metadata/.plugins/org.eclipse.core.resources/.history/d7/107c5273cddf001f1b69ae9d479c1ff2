@@ -1,0 +1,65 @@
+package matrices;
+
+public class Matriznorepetidos {
+	
+	public static void mostrar(int [][] m) {
+		
+		for(int i=0; i<m.length; i++) {
+			for(int j=0; i<m[i].length; j++) 
+					System.out.println(m[i][j]+"\t");
+			
+			System.out.println(); 
+		}
+		
+	}
+	
+	/**
+	 * Funcion que determina si un valor se encutnra almacenado en una matriz
+	 * @param m - array bidimensional de valores enteros
+	 * @param valor - valor enero (que vamos a ver si se encuenta ya o no almacenada en la matriz)
+	 * @param fila- fila de la matriz hasta la que comparamos los valores
+	 * @param columna - columna de la matriz, dentro de la fila indicada como parametro, 
+	 * @return true si N se encuentra entre los valores almacenados en la matriz y false en caso contrario
+	 */
+	
+	public static boolean encontrado(int [][] m, int valor, int fila, int columna) {
+		
+		for(int i=0; i<m.length; i++) {
+			for(int j=0; i<m[i].length; j++) 
+					
+				if((m[i][j]==fila) || (m[i][j]==columna)) 
+					
+					return true;
+			
+			
+		}
+		return false;
+	}
+	
+		
+	
+	
+	final static int FILAS=4;
+	final static int COLUMNAS=6;
+
+	public static void main(String[] args) {
+		
+		int [][] matriz=new int [FILAS][COLUMNAS];
+		int valor;
+		/*
+		for(int i=0; i<matriz.length; i++) 
+			for(int j=0; i<matriz[i].length; j++) {
+				do {
+					valor=(int)(Math.random()*(FILAS*COLUMNAS));
+				}while(encontrado(matriz, valor, i, j));
+			matriz[i][j]=valor;
+		}
+		*/
+		mostrar(matriz);
+		
+	}
+}
+	
+	
+
+
