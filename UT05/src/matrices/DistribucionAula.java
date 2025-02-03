@@ -55,6 +55,8 @@ public class DistribucionAula {
 				  "Felix R.","JAPeñalver", "Jesus P.", "Erik P.","Eduardo P.", 
 				  "Ivan S.", "Jalil T.", "Alejandro","Adrian V."}; 
 		
+		
+		
 		int [][] matriz=new int [FILAS][COLUMNAS];
 		int valor;
 		

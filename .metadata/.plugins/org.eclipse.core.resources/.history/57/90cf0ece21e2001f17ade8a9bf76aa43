@@ -1,0 +1,28 @@
+package strings.ejemplos;
+
+import java.util.Scanner;
+
+public class Ejemplo01 {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+
+		System.out.print("Dime tu primer nombre: ");
+		String nombre1=sc.nextLine();
+
+		System.out.print("Dime tu segundo nombre: ");
+		String nombre2=sc.nextLine();
+
+
+		sc.close();
+
+		if(nombre1.equals(nombre2))
+			System.out.print(nombre1+" y "+nombre2+" son iguales");
+		else
+			System.out.print(nombre1+" y "+nombre2+" son distintos");
+
+
+	}
+
+}
