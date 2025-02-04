@@ -52,9 +52,9 @@ public class Ejercicio07 {
 		//Insertamos el nuevo elemento
 		tabla[posicion]=nuevo;
 		
-		//mostramos los elementos almacenados
+		//mostramos los elementos almacenados y le quitamos uno para que no nos salga 0 al final 
 		System.out.print("Tabla: ");
-		for(int i=0; i<tabla.length; i++)
+		for(int i=0; i<tabla.length-1; i++)
 			System.out.print(tabla[i]+" ");
 	}
 

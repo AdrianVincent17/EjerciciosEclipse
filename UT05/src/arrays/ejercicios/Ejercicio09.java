@@ -30,7 +30,7 @@ public class Ejercicio09 {
 
 			
 
-			for(int j=0; j<=posiciones; j++) {
+			for(int j=0; j<posiciones; j++) {
 				
 				int ultimo= vector[vector.length-1];
 

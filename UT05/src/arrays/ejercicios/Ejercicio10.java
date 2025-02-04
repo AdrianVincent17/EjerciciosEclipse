@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio10 {
 
-	final static int TAM=4;
+	final static int TAM=9;
 
 	/**
 	 * Procedimiento que visualiza un array de numeros enteros por pantalla

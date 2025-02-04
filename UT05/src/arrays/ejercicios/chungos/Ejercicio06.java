@@ -79,7 +79,7 @@ public class Ejercicio06 {
 	}
 	
 	final static int TAM=6;
-	final static int LIMITE=50;
+	final static int LIMITE=49;
 
 
 	public static void main(String[] args) {
@@ -99,8 +99,8 @@ public class Ejercicio06 {
 				System.out.print("["+(i+1)+"] Numero: ");
 				vector1[i]=teclado.nextInt();
 				
-				if((vector1[i]<1) || (vector1[i]>50)){
-					System.out.println("> El valor no se encuentra entre 1 y 50");
+				if((vector1[i]<1) || (vector1[i]>49)){
+					System.out.println("> El valor no se encuentra entre 1 y 49");
 				}else {
 					repetido=encontrado(vector1, vector1[i], i);
 					if(repetido) { 
@@ -109,7 +109,7 @@ public class Ejercicio06 {
 					
 				}
 
-				}while( (vector1[i]<1) || (vector1[i]>50) || (repetido));
+				}while( (vector1[i]<1) || (vector1[i]>49) || (repetido));
 				
 			}
 		}catch(Exception e) {

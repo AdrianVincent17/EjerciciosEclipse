@@ -60,12 +60,6 @@ public class MenuDistribucionAula {
 		return false;
 	}
 
-
-
-
-
-
-
 	public static void menu() {
 
 		System.out.println(" _________________________");
@@ -122,7 +116,7 @@ public class MenuDistribucionAula {
 							  "Felix R.","JAPeñalver", "Jesus P.", "Erik P.","Eduardo P.", 
 							  "Ivan S.", "Jalil T.", "Alejandro","Adrian V."}; 
 					
-					for
+				
 					
 					System.out.println("\n"+a+" + "+b+" = "+(a+b));break;
 					case 2: System.out.println("\nRESTA");
