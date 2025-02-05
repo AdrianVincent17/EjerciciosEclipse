@@ -1,0 +1,17 @@
+package strings.ejemplos;
+
+public class Ejemplo03 {
+
+	public static void main(String[] args) {
+		
+		String nombre1="ABC";
+		String nombre2=new String("BBC");
+		
+		System.out.println("Comparamos...");
+		System.out.println(nombre1.compareTo(nombre2));
+		
+		
+
+	}
+
+}

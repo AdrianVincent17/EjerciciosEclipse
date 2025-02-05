@@ -1,0 +1,11 @@
+package strings.ejemplos;
+
+public class Ejemplo02 {
+
+	public static void main(String[] args) {
+		
+		String nombre="Adrian";
+
+	}
+
+}

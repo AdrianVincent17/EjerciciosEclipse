@@ -1,0 +1,14 @@
+package strings.ejemplos;
+
+public class Ejemplo04 {
+
+	public static void main(String[] args) {
+		
+		//trim()
+		
+		String nombre=new String ("   Harry Potter      ");
+		System.out.println(nombre.trim());
+
+	}
+
+}
