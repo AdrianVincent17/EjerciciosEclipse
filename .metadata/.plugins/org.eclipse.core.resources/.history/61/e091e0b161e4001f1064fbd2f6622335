@@ -1,0 +1,19 @@
+package strings.ejemplos;
+
+public class LocalizarEspaciov2 {
+
+	public static void main(String[] args) {
+		
+		//Localizar el espacio con el indexOff
+		
+		String nombre="Harry Potter";
+		String espacio=" ";
+		
+		if(nombre.indexOf(espacio)==-1)
+			System.out.println("Tiene un espacio");
+		else 
+			System.out.println("No tiene espacios");
+
+	}
+
+}

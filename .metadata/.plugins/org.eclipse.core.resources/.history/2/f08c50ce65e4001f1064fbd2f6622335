@@ -1,0 +1,16 @@
+package strings.ejemplos;
+
+public class Ejemplo06 {
+
+	public static void main(String[] args) {
+		
+		//Ejemplo con String 
+		
+		String nombre1 = "Harry Potter";
+		
+		nombre1.toUpperCase();
+		System.out.println(nombre1);
+
+	}
+
+}
