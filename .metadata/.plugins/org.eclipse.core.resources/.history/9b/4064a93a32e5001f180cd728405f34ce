@@ -1,0 +1,31 @@
+package strings.ejercicios;
+
+import java.util.Scanner;
+
+public class Ejercicio03 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		System.out.print("Introduce una cadena: ");
+		String introducida=sc.nextLine();
+		
+		System.out.print("Introduce cadena a buscar: ");
+		String buscada=sc.nextLine();
+		int conta=0;
+		for(int i=0; i<introducida.length(); i++) {
+			if(introducida.indexOf("buscada")!=0) {
+			conta++;
+			}
+		}
+		
+		System.out.println(conta);
+		
+		sc.close();
+
+	}
+
+}

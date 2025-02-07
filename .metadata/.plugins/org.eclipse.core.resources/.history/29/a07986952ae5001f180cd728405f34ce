@@ -1,0 +1,25 @@
+package strings.ejercicios;
+
+import java.util.Scanner;
+
+public class Ejercicio02 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String cad;
+		
+		System.out.println("Introduce una palabra: ");
+		cad=sc.nextLine();
+		
+		StringBuffer cadinvertida= new StringBuffer(cad);
+		
+		
+		System.out.println(cad+cadinvertida.reverse().toString().substring(1));
+		
+		sc.close();
+
+	}
+
+}
