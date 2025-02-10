@@ -1,6 +1,6 @@
-package strings;
+package strings.ejercicios;
 
-public class Ejemplo01 {
+public class Ejercicio05 {
 
 	public static void main(String[] args) {
 		// TODO Esbozo de método generado automáticamente

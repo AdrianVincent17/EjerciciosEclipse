@@ -8,20 +8,20 @@ public class Ejercicio04 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Introduce una cadena: ");
+		System.out.println("Introduce una cadena: ");
 		String cadena=sc.nextLine();
 		
-		System.out.print("Introduce otra cadena: ");
+		System.out.println("Introduce otra cadena: ");
 		String subcadena=sc.nextLine();
 		
 		String devolver = "";
 		
 		//2. Reemplazamos la subcadena (en mayusculas) dentro de la cadena
 		
-		cadena=cadena.replaceAll(subcadena, subcadena.toUpperCase());
+		cadena=cadena.replaceAll(cadena, subcadena.toUpperCase());
 			
-		//3. Mostramos el resultado por pantalla
-		System.out.println(cadena);
+		
+		System.out.println(devolver);
 		
 		
 		sc.close();

@@ -20,7 +20,7 @@ public class Ejercicio04 {
 		
 		cadena=cadena.replaceAll(subcadena, subcadena.toUpperCase());
 			
-		//3. Mostramos el resultado por pantalla
+		
 		System.out.println(cadena);
 		
 		
