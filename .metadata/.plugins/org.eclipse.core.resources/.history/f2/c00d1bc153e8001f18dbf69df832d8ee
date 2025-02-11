@@ -1,0 +1,22 @@
+package strings;
+
+import java.util.Scanner;
+
+public class Repaso {
+
+	public static void main(String[] args) {
+		// Pedimos al usuario que introduczca su nombre
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Introduce tu nombre: ");
+		String nombre=sc.nextLine();
+		
+		sc.close();
+		
+		//Mostramos informacion sobre el nombre introducido
+		
+		System.out.print("\n> Nombre: "+nombre);
+
+	}
+
+}

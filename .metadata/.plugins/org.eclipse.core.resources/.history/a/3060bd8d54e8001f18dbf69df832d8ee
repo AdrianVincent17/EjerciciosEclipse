@@ -1,0 +1,49 @@
+package strings;
+
+import java.util.Scanner;
+
+public class Repaso {
+	
+	public static int numvocales(String nombre) {
+		
+		 int conta=0;
+		 char c = ' ';
+		
+		for(int i=0; i<nombre.length(); i++) {
+			c=nombre.toUpperCase().charAt(i);
+		
+		if(c=='A' || c=='E' || c=='I' || c=='O' || c=='U')
+			conta++;
+		}
+		return conta;
+	}
+
+	public static void main(String[] args) {
+		// Pedimos al usuario que introduczca su nombre
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Introduce tu nombre: ");
+		String nombre=sc.nextLine();
+		
+		sc.close();
+		
+		//Mostramos informacion sobre el nombre introducido
+		
+		System.out.print("\n> Nombre: "+nombre);
+		
+		//Mostramos el numero de vocales de nuestro nombre
+		System.out.println("\n> Cantidad de vocales: "+numvocales(nombre));
+		
+		//Mostramos un String con solo las vocales de nuestro nombre
+		System.out.println("\n Vocales: ");
+		
+		//Mostramos el numero de consonantes de nuestro nombre
+		System.out.println("\n> Cantidad de consonantes: ");
+		
+		//Mostramos un String con solo las consonantes de nuestro nombre
+		System.out.println("\n Consonantes: ");
+		
+
+	}
+
+}
