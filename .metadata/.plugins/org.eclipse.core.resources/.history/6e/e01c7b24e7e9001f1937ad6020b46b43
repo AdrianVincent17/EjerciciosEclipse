@@ -1,0 +1,64 @@
+package strings;
+
+import java.util.Scanner;
+
+public class PalabraAleatoria {
+	
+	private static String generarPalabras() {
+		String[] array= {"AUSTRALOPITECUS","PIZARRA","LINFOCITO","GERIFALTE","APITAFIO",
+				"EMPANADILLA","MATASUEGRAS","DROMEDARIO","CORONAVIRUS","TESTAMENTO","ORDENAMIENTO",
+				"ANTICAPITALISMO","FONTANERO","BUTANERO",};
+		return array[(int )(Math.random()*array.length)];
+		
+	}
+
+	public static void main(String[] args) {
+		
+		String palabraAcertar=generarPalabras();
+		String palabraMostrar="";
+		
+		for(int i=0; i<palabraAcertar.length(); i++) {
+			palabraMostrar+="*";
+		}
+		
+		System.out.println("Palabra a acertar: "+palabraAcertar);
+		System.out.println("Palabra a mostrar: "+palabraMostrar);
+		
+		String resuelvo;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Introduce una letra: ");
+		String letra=sc.nextLine().toUpperCase();
+		System.out.println("Letra introducida: "+letra);
+		
+		if(letra.startsWith("RESUELVO:"))
+			resuelvo = letra;
+		resuelvo = letra.substring(9);
+		
+		if(resuelvo.equals(palabraAcertar))
+			System.out.println("acertaste la palabra");
+		
+		if(palabraAcertar.indexOf(letra)!=-1) {
+			System.out.println("ACERTASTE la letra "+letra+" se encuentra en la palabra a acertar");
+			/*
+			for(int i=0; i<palabraAcertar.length(); i++)
+				if(palabraAcertar.charAt(i)==letra)
+				palabraMostrar=palabraMostrar.substring(0,i)+letra+palabraMostrar.substring(i+1);
+			
+			System.out.println("Palabra a mostrar: "+palabraMostrar);
+		}else
+
+			System.out.println("FALLASTE la letra "+letra+" no se encuentra en la palabra a acertar");
+		
+		*/
+		
+		sc.close();
+		
+		
+		
+		}
+
+	}
+}
+
+
