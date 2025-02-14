@@ -197,8 +197,8 @@ public class BoletinMatrices {
 								
 								}				
 								
-								
-							} while (opcion<1||opcion>5||introducido==false);
+								 
+							} while (opcion<1 || opcion>5 || !introducido);
 						} while (opcion!=5);
 						
 						

@@ -14,8 +14,6 @@ public class Ejercicio04 {
 		System.out.print("Introduce otra cadena: ");
 		String subcadena=sc.nextLine();
 		
-		String devolver = "";
-		
 		//2. Reemplazamos la subcadena (en mayusculas) dentro de la cadena
 		
 		cadena=cadena.replaceAll(subcadena, subcadena.toUpperCase());

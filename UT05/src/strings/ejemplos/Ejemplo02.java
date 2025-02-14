@@ -74,7 +74,7 @@ public class Ejemplo02 {
 
 		//8. Imprimimos solo las vocales
 
-		System.out.println("\nVocales: ");
+		System.out.print("\nVocales: ");
 
 		char c;
 

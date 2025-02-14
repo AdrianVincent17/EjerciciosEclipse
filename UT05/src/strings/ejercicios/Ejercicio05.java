@@ -12,7 +12,7 @@ public class Ejercicio05 {
 	 */
 	public static boolean esVocal(char c) {
 		
-
+		
 		if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
 			return true;
 		if(c=='A' || c=='E' || c=='I' || c=='O' || c=='U')
@@ -26,6 +26,7 @@ public class Ejercicio05 {
 	 * @return TRUE si c es una consonante y sus mayusculas correspondientes, y FALSE en caso contrario
 	 */
 	public static boolean esConsonante(char c) {
+		
 		
 		if(esVocal(c))
 			return false;

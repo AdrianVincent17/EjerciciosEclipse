@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class PalabraAleatoria {
 
 	private static String generarPalabras() {
-		String[] array= {"AUSTRALOPITECUS","PIZARRA","LINFOCITO","GERIFALTE","APITAFIO",
+		String[] array= {"AUSTRALOPITECUS","PIZARRA","LINFOCITO","GERIFALTE","EPITAFIO",
 				"EMPANADILLA","MATASUEGRAS","DROMEDARIO","CORONAVIRUS","TESTAMENTO","ORDENAMIENTO",
 				"ANTICAPITALISMO","FONTANERO","BUTANERO",};
 		return array[(int )(Math.random()*array.length)];
@@ -39,18 +39,23 @@ public class PalabraAleatoria {
 			System.out.println("Nº intentos restantes: "+(TOTAL_INTENTOS-intentos));
 
 
-			System.out.print("Introduce una letra: ");
+			System.out.print("introduce 'resolver' o una letra: ");
 			cadena=sc.nextLine().toUpperCase();
 			
 			
 		
 
-			if(cadena.startsWith("RESUELVO:")) {
-
-				if(palabraAcertar.equals(cadena.substring(9)))
+			if(cadena.startsWith("RESOLVER")) {
+				
+				System.out.println("De acuerdo vamos a resolver...");
+				System.out.print("Prueba la palabra: ");
+				
+				String resuelve=sc.nextLine().toUpperCase().trim();
+	
+				if(palabraAcertar.equals(resuelve))
 					acertada=true;
 				else
-					System.out.println("OHHH La palabra introducida no es correcta");
+					System.out.println("OHHH no pudiste resolver...");
 			}else {
 
 				letra=cadena.charAt(0);
@@ -71,12 +76,12 @@ public class PalabraAleatoria {
 			}
 			intentos++;
 
-		}
+		}	
 
 		sc.close();
 
 		if(acertada) {
-			System.out.println("Enhorabuena acertarste la palabra");
+			System.out.println("Enhorabuena acertaste la palabra");
 			System.out.println("Acerstaste la palabra en: "+intentos+" intentos");
 		}else 
 			System.out.println("oh lo siento agotaste el numero de intentos");

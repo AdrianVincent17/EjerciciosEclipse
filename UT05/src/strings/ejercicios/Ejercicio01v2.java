@@ -19,8 +19,9 @@ public class Ejercicio01v2 {
 		String invertida = new String();
 		
 		for(int i=cad.length()-1; i>=0; i--) {
-			invertida=invertida +cad.charAt(i);
+				invertida+=cad.charAt(i);
 		}
+		
 		
 		//3. MOstramos por pantalla la cadena invertida
 		

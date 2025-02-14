@@ -26,7 +26,7 @@ public class LocalizarEspacio {
 		String nombre="Harry Potter";
 		
 		System.out.println(primerBlanco(nombre));
-		
+		 
 		System.out.println("Nombre: "+nombre.substring(0, primerBlanco(nombre)));
 		System.out.println("Apellido: "+nombre.substring(primerBlanco(nombre)+1));
 		
