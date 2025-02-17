@@ -1,6 +1,6 @@
-package strings.ejercicios;
+package conjutos;
 
-public class Ejercicio05 {
+public class Set02 {
 
 	public static void main(String[] args) {
 		// TODO Esbozo de método generado automáticamente
