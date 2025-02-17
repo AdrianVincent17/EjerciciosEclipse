@@ -1,0 +1,38 @@
+package strings.Boletin;
+
+import java.util.Scanner;
+
+public class Ej02 {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		
+		try {
+			String entrada;
+			String cadena="FIN";
+			int conta=0;
+			System.out.println("Introduce palabras (FIN para terminar...");
+			
+			do {
+				System.out.println("palabra "+conta+": ");
+				entrada=sc.nextLine();
+				entrada=entrada.concat(entrada)+" ";
+				conta++;
+				
+			}while(entrada.indexOf(cadena)!=-1);
+			
+			System.out.println("Frase: "+entrada);
+			
+		}catch(Exception  e) {
+			System.out.println("Error");
+			
+		}finally {
+			sc.close();
+		}
+		
+		
+
+	}
+
+}

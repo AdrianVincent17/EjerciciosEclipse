@@ -13,7 +13,7 @@ public class Palindromo {
 	public static boolean esPalindromo(String cad) {
 		
 		//pasamos la cadena a mayusculas y eliminamos los espacios en blanco del principio y final
-		cad=cad.toUpperCase().trim();
+		cad=cad.toUpperCase().replace(" ", "").trim();
 		
 		//ahora le daremos la vuelva a la cadena utilizando la funcion StringBuffer
 		StringBuffer invertida=new StringBuffer(cad);
