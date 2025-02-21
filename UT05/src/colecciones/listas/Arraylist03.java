@@ -1,0 +1,33 @@
+package colecciones.listas;
+
+import java.util.ArrayList;
+
+public class Arraylist03 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> lista=new ArrayList<Integer>();
+		
+		//Añadimos valores
+		lista.add(5);
+		lista.add(8);
+		lista.add(10);
+		lista.add(20);
+		lista.add(30);
+		lista.add(15);
+		
+		//Mostramos los valores
+		System.out.print("lista: "+lista.toString());
+		
+		System.out.println("\nEliminamos el valor que ocupa la posicion 5");
+		lista.remove(5);
+		System.out.print("lista: "+lista.toString());
+		
+		System.out.println("\nEliminamos el valor 30 de la lista");
+		lista.remove(Integer.valueOf(30));
+		System.out.print("lista: "+lista.toString());
+		
+		
+	}
+
+}

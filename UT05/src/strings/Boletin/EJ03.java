@@ -12,6 +12,12 @@ public class EJ03 {
 		
 		String entrada=sc.nextLine();
 		
+		String[] frase=entrada.split(" ");
+		
+		for(int i=0; i<frase.length; i++) {
+			System.out.println("palabra: "+(i+1)+" "+frase[i]);
+		}
+		
 		
 		
 		

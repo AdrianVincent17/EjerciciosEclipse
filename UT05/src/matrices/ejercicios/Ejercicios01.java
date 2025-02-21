@@ -5,10 +5,10 @@ public class Ejercicios01 {
 	public static void mostrarmatriz(int[][] a) {
 		
 		for(int i=0; i<a.length; i++) {
-			for(int j=0; j<a[i].length; j++) {
+			for(int j=0; j<a[i].length; j++) 
 				System.out.print(a[i][j]+"\t");
-			}
-			System.out.println();
+			
+			System.out.println("");
 		}
 	}
 	
@@ -34,7 +34,7 @@ public class Ejercicios01 {
 		}
 		*/
 		
-		for(int i=0; i<TAM; i++) {
+		for(int i=0; i<matriz.length; i++) {
 			matriz[i][i]=1;
 		}
 		

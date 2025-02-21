@@ -13,7 +13,7 @@ public class Ej02 {
 			String cadena="FIN";
 			int conta=1;
 			System.out.println("Introduce palabras (FIN para terminar...");
-			String aux=" ";
+			String aux="";
 			do {
 				System.out.print("palabra "+conta+": ");
 				entrada=sc.nextLine();

@@ -47,7 +47,7 @@ public class Repaso {
 
 	public static String consonantes(String nombre) {
 
-		String vocal="";
+		String consonantes="";
 		char c;
 
 		for(int i=0; i<nombre.length(); i++) {
@@ -55,16 +55,16 @@ public class Repaso {
 
 			if(c>='B' && c<='Z') {
 				if(c!='A' && c!='E' && c!='I' && c!='O' && c!='U')
-					vocal+=c;
+					consonantes+=c;
 			}
 			if(c>='b' && c<='z') {
 				if(c!='a' && c!='e' && c!='i' && c!='o' && c!='u')
-					vocal+=c;
+					consonantes+=c;
 			}
 
 
 		}
-		return vocal;
+		return consonantes;
 
 	}
 

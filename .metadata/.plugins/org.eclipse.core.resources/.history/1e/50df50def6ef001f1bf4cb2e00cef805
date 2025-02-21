@@ -1,0 +1,28 @@
+package colecciones.listas;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Arraylist04 {
+	
+	/**
+	 * Muestra por pantalla los elementos almacenados en una lista de enteros
+	 * @param l Arraylist de numeros enteros
+	 */
+	
+	public static void printlist(ArrayList<Integer> l) {
+		
+		Iterator<Integer> i=l.iterator();
+		while(i.hasNext()) {
+			System.out.println(i.next()+" ");
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

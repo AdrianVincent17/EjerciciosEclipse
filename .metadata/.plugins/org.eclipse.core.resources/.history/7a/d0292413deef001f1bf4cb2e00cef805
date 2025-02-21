@@ -1,0 +1,57 @@
+package repasoexamen;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
+import java.util.Date;
+
+public class diastranscurridos {
+
+		    public static void main(String[] args) {
+		        // Crear un objeto Scanner para leer la entrada del usuario
+		        Scanner scanner = new Scanner(System.in);
+
+		        // Solicitar al usuario que ingrese el día, mes y año
+		        System.out.print("Introduce el día: ");
+		        int dia = scanner.nextInt();
+
+		        System.out.print("Introduce el mes (1-12): ");
+		        int mes = scanner.nextInt();
+
+		        System.out.print("Introduce el año: ");
+		        int anio = scanner.nextInt();
+
+		        // Crear un objeto SimpleDateFormat para formatear las fechas
+		        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+		        try {
+		            // Crear la fecha proporcionada por el usuario
+		            Date fecha = sdf.parse(dia + "/" + mes + "/" + anio);
+
+		            // Crear la fecha de inicio del año (1 de enero del mismo año)
+		            Date inicioAnio = sdf.parse("01/01/" + anio);
+
+		            // Calcular la diferencia en milisegundos
+		            	long diferenciaMillis = fecha.getTime()- inicioAnio.getTime();
+
+		            // Convertir la diferencia de milisegundos a días
+		            long diasTranscurridos = diferenciaMillis / (1000 * 60 * 60 * 24*);
+		            
+		            long minutostransc= diferenciaMillis / (1000*60);
+
+		            System.out.println(minutostransc);
+		            // Mostrar el resultado
+		            System.out.println("Desde el 1 de enero de " + anio + " hasta el " + dia + "/" + mes + "/" + anio + " han transcurrido " + diasTranscurridos + " días.");
+		        } catch (ParseException e) {
+		            System.out.println("Formato de fecha incorrecto. Asegúrate de introducir una fecha válida.");
+		        } finally {
+		            // Cerrar el Scanner
+		            scanner.close();
+		        }
+		    }
+		
+		
+
+	}
+
+

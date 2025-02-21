@@ -1,0 +1,43 @@
+package conjutos;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Set03 {
+
+	public static void main(String[] args) {
+		
+		Set<Integer> numberset= new HashSet<Integer>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			System.out.print(">> Dime un numero: ");
+			
+			int numero=sc.nextInt();
+			while(numero!=0){
+				if(numero<0) 
+					System.out.println("> "+numero+" es negativo");
+				else if(numberset.contains(numero)) 
+						System.out.println("El numero "+numero+" ya se encuentra en el conjunto");
+				else
+						
+						numberset.add(numero);
+						System.out.print("> Dime un numero: ");
+						numero=sc.nextInt();
+				
+			}
+			
+		}catch(Exception e) {
+			System.out.println("Error, dato introducido no valido ");
+		}
+		
+		sc.close();
+		
+		System.out.println("\n > Tamaño del conjunto: "+numberset.size());
+		System.out.println("> Conjunto: "+numberset.toString());
+
+	}
+
+}

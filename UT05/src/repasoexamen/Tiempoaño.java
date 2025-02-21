@@ -1,0 +1,42 @@
+package repasoexamen;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Tiempoaño {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			Date fechahoy=new Date();
+			SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+			/*
+			System.out.print("Introduce un dia: ");
+			int dia=sc.nextInt();
+			
+			System.out.print("Introduce un mes: ");
+			int mes=sc.nextInt();
+			
+			System.out.print("Introcue un año: ");
+			int año=sc.nextInt();
+			*/
+			Date fechafin=sdf.parse("01/01/2025");
+			
+			long tiempomili=fechahoy.getTime()-fechafin.getTime();
+			
+			long diastrans=tiempomili/(1000*60*60*24);
+			
+			System.out.print("dias transcurridos desde el incio de año hasta "+fechahoy+" : "+diastrans+" dias");
+		
+		}catch(Exception e) {
+			System.out.println("Error");
+		}
+		
+		sc.close();
+
+	}
+
+}

@@ -1,0 +1,76 @@
+package repasoexamen;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
+import java.util.Date;
+
+public class diastranscurridos {
+
+	public static void main(String[] args) {
+		// Crear un objeto Scanner para leer la entrada del usuario
+		Scanner scanner = new Scanner(System.in);
+
+		// Solicitar al usuario que ingrese el día, mes y año
+		System.out.print("Introduce el dia de inicio: ");
+		int dia2= scanner.nextInt();
+		
+		System.out.print("Introduce el mes de inicio: ");
+		int mes2= scanner.nextInt();
+		
+		System.out.print("Introduce el año de inicio: ");
+		int anio2= scanner.nextInt();
+
+		// Crear un objeto SimpleDateFormat para formatear las fechas
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+		try {
+			Date fechahoy=new Date();
+			// Crear la fecha proporcionada por el usuario
+			/*Date fecha = sdf.parse(dia + "/" + mes + "/" + anio);*/
+
+			// Crear la fecha de inicio del año (1 de enero del mismo año)
+			Date fechaini = sdf.parse(dia2+"/"+mes2+"/"+anio2);
+
+			// Calcular la diferencia en milisegundos
+			/*long diferenciaMillis = fecha.getTime()- fechaini.getTime();*/
+			
+			long diferenciaMillishoy= fechahoy.getTime()-fechaini.getTime();
+
+			// Convertir la diferencia de milisegundos a días
+			long añoTrans = diferenciaMillishoy / (1000 * 60 * 60 * 24)/((long)365.6);
+			
+			long semTrans = diferenciaMillishoy / (1000 * 60 * 60 * 24)/(long)(365.6/52);
+			
+			long mesTrans = diferenciaMillishoy / (1000 * 60 * 60 * 24)/((long)365.6/12);
+			
+			long diaTrans = diferenciaMillishoy / (1000 * 60 * 60 * 24);
+
+			long horTrans = diferenciaMillishoy / (1000 * 60 * 60);
+			
+			long minTrans = diferenciaMillishoy / (1000 * 60);
+
+			long segTrans = diferenciaMillishoy / (1000);
+
+			
+			// Mostrar el resultado
+			System.out.println("Desde el"+dia2+"de "+mes2+"de " + anio2 + " hasta "+fechahoy + " han transcurrido " + segTrans + " segundos.");
+			System.out.println("Desde el"+dia2+"de "+mes2+"de " + anio2 + " hasta "+fechahoy + " han transcurrido " + minTrans + " minutos.");
+			System.out.println("Desde el"+dia2+"de "+mes2+"de " + anio2 + " hasta "+fechahoy + " han transcurrido " + horTrans + " horas.");
+			System.out.println("Desde el"+dia2+"de "+mes2+"de " + anio2 + " hasta "+fechahoy + " han transcurrido " + diaTrans + " dias.");
+			System.out.println("Desde el"+dia2+"de "+mes2+"de " + anio2 + " hasta "+fechahoy + " han transcurrido " + semTrans + " semanas.");
+			System.out.println("Desde el"+dia2+"de "+mes2+"de " + anio2 + " hasta "+fechahoy + " han transcurrido " + mesTrans + " meses.");
+			System.out.println("Desde el"+dia2+"de "+mes2+"de " + anio2 + " hasta "+fechahoy + " han transcurrido " + añoTrans + " años.");
+		} catch (ParseException e) {
+			System.out.println("Formato de fecha incorrecto. Asegúrate de introducir una fecha válida.");
+		} finally {
+			// Cerrar el Scanner
+			scanner.close();
+		}
+	}
+
+
+
+}
+
+
