@@ -1,0 +1,37 @@
+package examen;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Ej04 {
+	public static void main(String[] args) {
+		
+		ArrayList<String> nombres=new ArrayList<String>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		String finaliz="FIN";
+		System.out.println("Dime un nombre y cuando pongas FIN se acaba el programa");
+		System.out.print("Dame el primer nombre: ");
+		String entrada=sc.nextLine();
+
+		while(!entrada.equals(finaliz)) {
+			
+			if(!nombres.add(entrada)) {
+				System.out.println("Nombre añadido");
+			}else {
+				System.out.println("nombre ya dentro");
+				System.out.println("Dame otro: ");
+				entrada=sc.nextLine();
+			}
+		}
+		
+		System.out.println("> Lista: "+nombres.toString());
+		
+		sc.close();
+	}
+
+}

@@ -1,5 +1,6 @@
 package matrices;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BoletinMatrices {
@@ -167,6 +168,7 @@ public class BoletinMatrices {
 										if (introducido) {
 											System.out.println("\n>> Los valores de la matriz han sido ordenados por filas");
 											ordenarFilasMatriz(matriz);
+											
 											System.out.println("\n>> MATRIZ: ");
 											mostrarmatriz(matriz);
 										} else {

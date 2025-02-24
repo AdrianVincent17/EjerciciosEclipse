@@ -1,0 +1,49 @@
+package examen;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Ej04 {
+	public static void main(String[] args) {
+		
+		ArrayList<String> nombres=new ArrayList<String>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		String finaliz="FIN";
+		System.out.println("Dime un nombre y cuando pongas FIN se acaba el programa");
+		System.out.print("Dame el primer nombre: ");
+		String entrada=sc.nextLine();
+
+		while(!entrada.equals(finaliz)) {
+			
+			if(!nombres.contains(entrada)) {
+				nombres.add(entrada);
+				System.out.println("Dime otro");
+				entrada=sc.nextLine();
+			}else 
+				System.out.println("nombre ya dentro");
+			
+		}
+		
+		System.out.println("> Lista: "+nombres.toString());
+		
+		System.out.println("Ahora dame uno a eliminar: ");
+		entrada=sc.nextLine();
+		
+		if(nombres.contains(entrada)) {
+			System.out.println("borrado");
+			nombres.remove(entrada);
+		}else
+			System.out.println("El nombre no se encuentra en el diccionario");
+			nombres.add(entrada);
+			
+		System.out.println("Lista: "+nombres.toString());
+		
+		sc.close();
+	}
+
+}

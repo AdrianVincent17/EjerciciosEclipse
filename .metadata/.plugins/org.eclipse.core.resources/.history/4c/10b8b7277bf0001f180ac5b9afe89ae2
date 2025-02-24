@@ -1,0 +1,57 @@
+package examen;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Ej03 {
+	
+	public static void mostrarray(int [] array) {
+		
+		for(int i=0; i<array.length; i++) {
+			System.out.print(array[i]+" ");
+		}
+		
+	}
+	
+	
+	final static int tam=8;
+	
+	public static int aleatorio(int N) {
+		
+		return (int)(Math.random()*N+1);
+	}
+	
+	public static void main(String[] args) {
+		
+
+		int [] array=new int[tam];
+		
+		for(int i=0; i<array.length; i++) {
+			array[i]=aleatorio(10);
+		}
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("> Lista: ");
+		mostrarray(array);
+		
+		System.out.print("\nDime un valor a eliminar: ");
+		int valor=sc.nextInt();
+		int cambio=0;
+		for(int i=0; i<array.length; i++) 
+			if(array[i]==valor) {
+				System.out.print("\nDime un valor por el que cambiar");
+			cambio=sc.nextInt();
+				array[i]=cambio;
+			}else {
+				System.out.println("el valor "+valor+" no se encuentra en el array");
+			
+		sc.close();
+		
+	}
+		
+		System.out.print("> Lista valor cambiado: ");
+		mostrarray(array);
+	}
+
+}

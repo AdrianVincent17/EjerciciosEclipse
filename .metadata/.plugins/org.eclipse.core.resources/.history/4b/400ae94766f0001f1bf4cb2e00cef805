@@ -1,0 +1,71 @@
+package examen;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Ej04 {
+	
+
+	/**
+	 * Muestra por pantalla los elementos almacenados en una lista de enteros
+	 * @param l Arraylist de numeros enteros
+	 */
+	
+	public static void printlist(ArrayList<String> l) {
+		
+		Iterator<String> i=l.iterator();
+		while(i.hasNext()) {
+			System.out.print(i.next()+" ");
+		}
+		
+	}
+	public static void main(String[] args) {
+		
+		ArrayList<String> nombres=new ArrayList<String>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		String finaliz="FIN";
+		System.out.println("Dime un nombre y cuando pongas FIN se acaba el programa");
+		System.out.print("Dame el primer nombre: ");
+		String entrada=sc.nextLine();
+
+		while(!entrada.equals(finaliz)) {
+			
+				nombres.add(entrada);
+			if(!nombres.contains(entrada)) {
+				nombres.add(entrada);
+				System.out.print("Dime otro");
+				entrada=sc.nextLine();
+			}else 
+				System.out.println("nombre ya dentro");
+				System.out.print("Dime otro");
+				entrada=sc.nextLine();
+			
+		}
+		
+		nombres.sort(null);
+		printlist(nombres);
+		
+		System.out.println("Ahora dame uno a eliminar: ");
+		entrada=sc.nextLine();
+		
+		if(nombres.contains(entrada)) {
+			System.out.println("borrado");
+			nombres.remove(String.valueOf(entrada));
+		}else
+			System.out.println("El nombre no se encuentra en el diccionario");
+			nombres.add(entrada);
+			
+		
+			
+		System.out.println("Lista: "+nombres.toString());
+		
+		sc.close();
+	}
+
+}
