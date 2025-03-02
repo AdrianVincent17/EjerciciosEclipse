@@ -1,5 +1,102 @@
 package ejercicios;
 
 public class Password {
+	//constantes
+	private final static int longi=8;
+	
+	//atributos
+	private int longitud;
+	/**
+	 * 
+	 */
+	public Password() {
+		
+		this.longitud=longi;
+		this.contraseña=generarcontraseña();
+	}
+	private String contraseña;
+	/**
+	 * @param longitud
+	 * @param contraseña
+	 */
+	public Password(int longitud) {
+		this.longitud = longitud;
+		this.contraseña = generarcontraseña();
+	}
+	/**
+	 * @return el longitud
+	 */
+	public int getLongitud() {
+		return longitud;
+	}
+	/**
+	 * @param longitud el longitud a establecer
+	 */
+	public void setLongitud(int longitud) {
+		this.longitud = longitud;
+	}
+	/**
+	 * @return el contraseña
+	 */
+	public String getContraseña() {
+		return contraseña;
+	}
+	/**
+	 * @param contraseña el contraseña a establecer
+	 */
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
+	}
+	
+	public boolean esfuerte() {
+		
+		//añadimos contadores para determinar la fortaleza de la contraseña
+		int contamay=0;
+		int contamin=0;
+		int contanum=0;
+		
+		if(contraseña.length()<8) {
+			return false;
+		}else {
+			for(int i=0; i<contraseña.length(); i++) {
+				if(contraseña.charAt(i)>='A' && contraseña.charAt(i)<='Z') {
+					contamay++;
+				}else if(contraseña.charAt(i)>='a' && contraseña.charAt(i)<='z') {
+					contamin++;
+				}else {
+					contanum++;
+				}
+			}
+			
+				if(contamay>=2 && contamin>=2 && contanum>=2)
+					return true;
+				return false;
+					
+				
+			}
+	}
+	
+	public String generarcontraseña() {
+		
+		String pass="";
+			for(int i=0; i<longitud; i++) {
+				int eleccion=(int)(Math.random()*3+1); //generamos un valor aleatorio de entre 1 y 3
+				switch(eleccion) {
+				case 1: char may=(char)(65+Math.random()*26);//generamos una letra mayuscula aleatoria
+						pass=pass+may;
+						break;
+				case 2: char min=(char)(97+Math.random()*26);//generamos una letra minusculas aleatoria
+						pass=pass+min;
+						break;
+				case 3: char numcar=(char)(48+Math.random()*10); //generamos un numero del 1 al 9
+						pass=pass+numcar;
+						break;
+				}	
+			}
+		
+		return pass;
+	}
+	
+	
 
 }
