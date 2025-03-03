@@ -155,7 +155,7 @@ public class Ahorcado {
 		String[] palabras = { "LEUCOCITO", "SOMBRILLA", "OBESIDAD", "CALAMBRE", "COBRADOR", "ARMARIO", "LIMONADA",
 				"ESCRITORIO", "ALCACHOFA", "MEDICAMENTO", "ABRAZADERA", "ESTRANGULAMIENTO", "ESTUPEFACIENTE", "MONITOR",
 				"MATASUEGRAS", "ESCOMBRO", "PINZAMIENTO", "EXTRAÑAR", "APROBAR", "VISTAZO", "OPORTUNIDAD", "LUMBRERAS",
-				"INSULTO" };
+				"INSULTO", "PARAPLEJICO", "TRIFASICO", "POMPEYA", "LUCIERNAGA" };
 
 		return palabraAcertar = palabras[(int) (Math.random() * palabras.length)];
 

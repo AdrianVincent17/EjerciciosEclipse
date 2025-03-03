@@ -17,7 +17,7 @@ public class Ahorcadotest {
 
 		System.out.println("Nº de letras que tiene la palabra " + J1.getPalabraAcertar().length());
 
-		while (J1.getIntentosrealizados() < J1.getIntentosTotales() && !acertada) {
+		while (J1.getIntentosrealizados() < J1.getIntentosrealizados() && !acertada) {
 
 			System.out.println("\nPalabra a acertar: " + J1.getPalabraMostrar());
 
@@ -55,7 +55,7 @@ public class Ahorcadotest {
 
 				if (repetida) {
 					System.out.println("La letra " + letra + " ya ha sido introducida anteriormente");
-					J1.setIntentosrealizados(J1.getIntentosrealizados()-1);
+					J1.setIntentosrealizados(J1.getIntentosrealizados() - 1);
 				} else {
 					// Añadir la letra al array en la posición actual del contador
 					metidos[contameti] = letra;
