@@ -1,0 +1,113 @@
+package ejercicios;
+
+public class Ahorcado {
+
+	private int intentosrealizados;
+	private int intentosTotales;
+	private String palabraAcertar;
+	private StringBuilder palabraMostrar;
+	private int intentosrestantes;
+
+	/**
+	 * @param palabraMostrar
+	 */
+	public Ahorcado() {
+
+		palabraMostrar = palabramostrar(palabraAcertar);
+		palabraAcertar = generarpalabra();
+		intentosTotales = 10;
+		intentosrealizados = 0;
+		intentosrestantes = intentosTotales - intentosrealizados;
+	}
+
+	public Ahorcado(int intentos) {
+
+		palabraAcertar = generarpalabra();
+		intentosTotales = intentos;
+		intentosrealizados = 0;
+		intentosrestantes = intentosTotales - intentosrealizados;
+	}
+
+	/**
+	 * Metodo que devuelve verdadero o falso en caso de que la letra pasada por
+	 * paramtero coincida con alguna letra de la palabra a acertar
+	 * 
+	 * @param letra
+	 * @return TRUE en caso de ser correcta Y FALSE si no lo es
+	 */
+
+	public boolean intentar(char letra) {
+		for (int i = 0; i < palabraAcertar.length(); i++) {
+			if (palabraAcertar.charAt(i) == letra) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * metodo que devuelve true o false si la cadena introducida como parametro es o
+	 * no igual a la palabra a acertar
+	 * 
+	 * @param cadena
+	 * @return TRUE si es correcta y FASLE si no lo es
+	 */
+
+	public boolean resolver(String cadena) {
+		if (palabraAcertar.equals(cadena)) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Palabra codificada con asteriscos de la palabra secreta
+	 */
+
+	public StringBuilder palabramostrar(String palabraAcertar) {
+		for (int i = 0; i < palabraAcertar.length(); i++) {
+			palabraMostrar.append('*');
+		}
+		return palabraMostrar;
+	}
+
+	public String generarpalabra() {
+
+		String[] palabras = { "LEUCOCITO", "SOMBRILLA", "OBESIDAD", "CALAMBRE", "COBRADOR", "ARMARIO", "LIMONADA",
+				"ESCRITORIO", "ALCACHOFA", "MEDICAMENTO", "ABRAZADERA", "ESTRANGULAMIENTO", "ESTUPEFACIENTE", "MONITOR",
+				"MATASUEGRAS", "ESCOMBRO", "PINZAMIENTO", "EXTRAÑAR", "APROBAR", "VISTAZO", "OPORTUNIDAD", "LUMBRERAS",
+				"INSULTO" };
+
+		return palabraAcertar = palabras[(int) (Math.random() * palabras.length)];
+
+	}
+
+	/**
+	 * @return el palabraAcertar
+	 */
+	public String getPalabraAcertar() {
+		return palabraAcertar;
+	}
+
+	/**
+	 * @param palabraAcertar el palabraAcertar a establecer
+	 */
+	public void setPalabraAcertar(String palabraAcertar) {
+		this.palabraAcertar = palabraAcertar;
+	}
+
+	/**
+	 * @return el palabraMostrar
+	 */
+	public String getPalabraMostrar() {
+		return palabraMostrar;
+	}
+
+	/**
+	 * @param palabraMostrar el palabraMostrar a establecer
+	 */
+	public void setPalabraMostrar(String palabraMostrar) {
+		this.palabraMostrar = palabraMostrar;
+	}
+
+}

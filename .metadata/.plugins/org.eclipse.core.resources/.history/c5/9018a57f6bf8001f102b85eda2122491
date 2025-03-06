@@ -1,0 +1,208 @@
+package ejercicios;
+
+public class Matriz {
+
+	// atributos
+
+	private int[][] matriz; // atributo de una matriz de numeros enteros
+	private int filas = 3;
+	private int columnas = 3;
+
+	/**
+	 * Constructor por defecto que inicializa una amtriz de 3x3 a ceros;
+	 * 
+	 * @param matriz
+	 */
+	public Matriz() {
+
+		this.matriz = new int[filas][columnas];
+	}
+
+	/**
+	 * @param matriz
+	 */
+	public Matriz(int N) {
+		this.matriz = new int[N][N];
+	}
+
+	/**
+	 * @return el filas
+	 */
+	public int getFilas() {
+		return matriz.length;
+	}
+
+	/**
+	 * @param filas el filas a establecer
+	 */
+	public void setFilas(int filas) {
+		this.filas = filas;
+	}
+
+	/**
+	 * @return el columnas
+	 */
+	public int getColumnas() {
+		return matriz[0].length;
+	}
+
+	/**
+	 * @param columnas el columnas a establecer
+	 */
+	public void setColumnas(int columnas) {
+		this.columnas = columnas;
+	}
+
+	/**
+	 * @return el matriz
+	 */
+	public int[][] getMatriz() {
+		return matriz;
+	}
+
+	/**
+	 * @param matriz el matriz a establecer
+	 */
+	public void setMatriz(int[][] matriz) {
+		this.matriz = matriz;
+	}
+
+	public void setValor(int filas, int columnas, int valor) {
+		matriz[filas][columnas] = valor;
+	}
+
+	/**
+	 * Devuelve un valor para la matriz
+	 * 
+	 * @param filas
+	 * @param columnas
+	 * @return
+	 */
+	public int getValor(int filas, int columnas) {
+		return matriz[filas][columnas];
+	}
+
+	/**
+	 * metodo que genera valores aleatorios automaticament en la matriz
+	 */
+	public void ValoresAleatorios() {
+
+		for (int i = 0; i < getFilas(); i++)
+			for (int j = 0; j < getColumnas(); j++)
+				matriz[i][j] = (int) (Math.random() * 10 + 1);
+	}
+
+	/***
+	 * metodo que ordena una matriz por filas
+	 */
+	public void OrdenaMatriz() {
+
+		for (int k = 0; k < getFilas(); k++)
+			for (int i = 0; i < getFilas(); i++)
+				for (int j = 0; j < getColumnas(); j++)
+					if (matriz[i][j] > matriz[i][j + 1]) {
+						int aux = matriz[i][j];
+						matriz[i][j] = matriz[i][j + 1];
+						matriz[i][j + 1] = aux;
+					}
+
+	}
+
+	/**
+	 * Devuelve el numero mayor que se encuentre en la matriz
+	 * 
+	 * @return
+	 */
+
+	public int ObtenerMayor() {
+		int mayor = matriz[0][0];
+		for (int i = 0; i < getFilas(); i++)
+			for (int j = 0; j < getColumnas(); j++)
+				if (mayor < matriz[i][j])
+					mayor = matriz[i][j];
+
+		return mayor;
+	}
+
+	/**
+	 * Devuelve el numero menor que se encuentre en la matriz
+	 * 
+	 * @return
+	 */
+
+	public int ObtenerMenor() {
+		int menor = matriz[0][0];
+		for (int i = 0; i < getFilas(); i++)
+			for (int j = 0; j < getColumnas(); j++)
+				if (menor > matriz[i][j])
+					menor = matriz[i][j];
+
+		return menor;
+	}
+
+	/**
+	 * metodo que devuelve el numero de numeros pares que contiene la matriz
+	 * 
+	 * @return numeros pares totales contenidos en la matriz
+	 */
+
+	public int ContarPares() {
+		int pares = 0;
+		for (int i = 0; i < getFilas(); i++)
+			for (int j = 0; j < getColumnas(); j++)
+				if (matriz[i][j] % 2 == 0)
+					pares++;
+
+		return pares;
+	}
+
+	/**
+	 * metodo que devuelve el numero de numeros impares que contiene la matriz
+	 * 
+	 * @return numeros impares totales contenidos en la matriz
+	 */
+
+	public int ContarImpares() {
+		int impares = 0;
+		for (int i = 0; i < getFilas(); i++)
+			for (int j = 0; j < getColumnas(); j++)
+				if (matriz[i][j] % 2 != 0)
+					impares++;
+
+		return impares;
+	}
+
+	public void numImpares() {
+		String impares = "";
+
+		for (int i = 0; i < getFilas(); i++)
+			for (int j = 0; j < getColumnas(); j++)
+				if (matriz[i][j] % 2 != 0)
+					System.out.print(matriz[i][j] + " ");
+	}
+
+	public void numPares() {
+		String pares = "";
+
+		for (int i = 0; i < getFilas(); i++)
+			for (int j = 0; j < getColumnas(); j++)
+				if (matriz[i][j] % 2 == 0)
+					System.out.print(matriz[i][j] + " ");
+	}
+
+	/**
+	 * Muesrra la matriz psada como parametro
+	 */
+	@Override
+	public String toString() {
+		String cadena = "";
+
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++)
+				System.out.print(matriz[i][j] + " \t");
+			System.out.println();
+		}
+		return cadena;
+	}
+
+}
