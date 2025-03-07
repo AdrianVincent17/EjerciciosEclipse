@@ -1,0 +1,51 @@
+package ejercicios;
+
+public class Cadena {
+	
+	//atributos 
+	
+	private String cadenita;
+
+	
+	/**
+	 * Constructor con un parametro
+	 * @param Cadena 
+	 */
+	
+	public Cadena(String cadenita) {
+		this.cadenita = cadenita;
+	}
+
+
+	/**
+	 * @return devuelve la cadena 
+	 */
+	
+	public String getCadenita() {
+		return cadenita;	
+	}
+
+
+	/**
+	 * Metodo que establece una cadena de String a traves de un parametro
+	 * @param cadena a establecer
+	 */
+	
+	public void setCadenita(String cadenita) {
+		this.cadenita = cadenita;	
+	}
+	
+	public int contarvocales(String cadena) {
+		int vocales=0;
+		for(int i=0; i<cadena.length(); i++) {
+			cadena=cadena.toUpperCase();
+			if(cadena=='A' || cadena=='E'|| cadena=='A' || cadena=='E')
+		}
+		
+		
+	}
+	
+	
+	
+	
+}

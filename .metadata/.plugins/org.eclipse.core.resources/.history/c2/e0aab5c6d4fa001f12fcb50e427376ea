@@ -1,0 +1,28 @@
+package ejercicios;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Cadenatest {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		try {
+			
+			String entrada=sc.nextLine();
+			Cadena c1= new Cadena(entrada);
+			
+			System.out.println(c1.toString());
+			
+			
+
+		} catch (InputMismatchException lupita) {
+			System.out.println("Dato incorrecto, no valido");
+		} finally {
+			sc.close();
+		}
+
+	}
+}

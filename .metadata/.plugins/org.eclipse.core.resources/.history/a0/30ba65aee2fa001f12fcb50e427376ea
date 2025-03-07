@@ -1,0 +1,12 @@
+package ejercicios;
+
+public class Empleadostest {
+
+	public static void main(String[] args) {
+
+		Empleados e1 = new Empleados("Adrian", 34, 1200, 6, "Senior");
+
+		System.out.println(e1.toString());
+	}
+
+}

@@ -1,0 +1,84 @@
+package ejercicios;
+
+public class Empleados {
+
+//
+//Ejercicio: Clase Empleado
+//
+//Crea una clase Empleado que tenga los siguientes miembros:
+//
+//Atributos (deben estar encapsulados):
+//
+//nombre (String)
+//
+//edad (int)
+//
+//salarioBase (double)
+//
+//añosExperiencia (int)
+//
+//puesto (String, puede ser "Junior", "SemiSenior" o "Senior")
+//
+//
+//Valores por defecto:
+//
+//nombre: cadena vacía.
+//
+//edad: 18.
+//
+//salarioBase: 1000.0.
+//
+//añosExperiencia: 0.
+//
+//puesto: "Junior".
+//
+//
+//Constructores:
+//
+//1. Constructor por defecto (valores iniciales por defecto).
+//
+//
+//2. Constructor con nombre, edad y puesto (los demás valores serán los predeterminados).
+//
+//
+//3. Constructor con todos los parámetros.
+//
+//
+//
+//Métodos:
+//
+//calcularSalarioFinal(): Calcula el salario total del empleado según estas reglas:
+//
+//Si el puesto es "Junior", el salario es salarioBase.
+//
+//Si el puesto es "SemiSenior", el salario aumenta en un 20%.
+//
+//Si el puesto es "Senior", el salario aumenta en un 40%.
+//
+//Si el empleado tiene más de 5 años de experiencia, se le suma un 10% adicional al salario total.
+//
+//
+//esElegibleParaAscenso(): Devuelve true si el empleado tiene más de 3 años de experiencia y su puesto no es "Senior".
+//
+//toString(): Devuelve toda la información del empleado (nombre, edad, salario final, etc.).
+//
+//Métodos set y get para cada atributo.
+//
+//
+//
+//---
+//
+//Ejemplo de uso:
+//
+//Realiza un programa que pida por teclado el nombre, la edad, el salario base, los años de experiencia y el puesto del empleado. Luego:
+//
+//1. Calcula y muestra el salario final.
+//
+//
+//2. Indica si es elegible para ascenso.
+//
+//
+//3. Muestra toda la información del empleado.
+//
+
+}
