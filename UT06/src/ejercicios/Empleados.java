@@ -34,6 +34,7 @@ public class Empleados {
 //3. Muestra toda la información del empleado.
 
 //atributos
+
 	private String nombre;
 	private int edad;
 	private double salariobase;
@@ -179,6 +180,10 @@ public class Empleados {
 		return salariofinal;
 	}
 
+	/**
+	 * metodo que devuelve true o false en caso de que se apto para el ascenso
+	 * @return true si cumple las condiciones o false si no.
+	 */
 	public boolean esposibleascenso() {
 
 		if (experiencia < 3) {
@@ -189,7 +194,12 @@ public class Empleados {
 			return true;
 		}
 	}
-
+	
+	
+	/***
+	 * metodo que muestra una cadena de caracteres con la informacion 
+	 */
+	
 	@Override
 	public String toString() {
 		return "nombre: " + nombre + "\nedad: " + edad + "\nsalariobase: " + salariobase + "\nexperiencia: "

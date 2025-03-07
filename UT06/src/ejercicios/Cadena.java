@@ -43,8 +43,8 @@ public class Cadena {
 	public int contarvocales() {
 		int vocales = 0;
 		char c;
-		for (int i = 0; i < this.cadenita.length(); i++) {
-			c = this.cadenita.toUpperCase().charAt(i);
+		for (int i = 0; i < cadenita.length(); i++) {
+			c = cadenita.toUpperCase().charAt(i);
 			if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
 				vocales++;
 			}
@@ -64,8 +64,8 @@ public class Cadena {
 	public int contarconsonantes() {
 		int consonantes = 0;
 		char c;
-		for (int i = 0; i < this.cadenita.length(); i++) {
-			c = this.cadenita.toUpperCase().charAt(i);
+		for (int i = 0; i < cadenita.length(); i++) {
+			c = cadenita.toUpperCase().charAt(i);
 			if (c >= 'B' && c <= 'Z') {
 				if (c != 'A' && c != 'E' && c != 'I' && c != 'O' && c != 'U') {
 					consonantes++;
@@ -86,8 +86,8 @@ public class Cadena {
 
 		String vocales = "";
 		char c;
-		for (int i = 0; i < this.cadenita.length(); i++) {
-			c = this.cadenita.charAt(i);
+		for (int i = 0; i < cadenita.length(); i++) {
+			c = cadenita.charAt(i);
 			if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
 				vocales += c + " ";
 			}
@@ -110,8 +110,8 @@ public class Cadena {
 
 		String consonantes = "";
 		char c;
-		for (int i = 0; i < this.cadenita.length(); i++) {
-			c = this.cadenita.charAt(i);
+		for (int i = 0; i < cadenita.length(); i++) {
+			c = cadenita.charAt(i);
 			if (c >= 'B' && c <= 'Z') {
 				if (c != 'A' && c != 'E' && c != 'I' && c != 'O' && c != 'U') {
 					consonantes += c + " ";
@@ -136,8 +136,8 @@ public class Cadena {
 
 	public int contarespacios() {
 		int espacios = 0;
-		for (int i = 0; i < this.cadenita.length(); i++) {
-			if (this.cadenita.charAt(i) == ' ') {
+		for (int i = 0; i < cadenita.length(); i++) {
+			if (cadenita.charAt(i) == ' ') {
 				espacios++;
 			}
 		}
