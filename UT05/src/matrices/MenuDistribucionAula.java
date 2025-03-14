@@ -5,29 +5,26 @@ import java.util.Scanner;
 
 public class MenuDistribucionAula {
 
-	final static int FILAS=4;
-	final static int COLUMNAS=6;
-	
-	public static void mostrararray(int []m) {
+	final static int FILAS = 4;
+	final static int COLUMNAS = 6;
 
-		for(int i=0; i<m.length; i++) {
-			
-				System.out.println("("+(i+1)+")"+m[i]);
-			}
-			System.out.println(); 
+	public static void mostrararray(int[] m) {
 
+		for (int i = 0; i < m.length; i++) {
+
+			System.out.println("(" + (i + 1) + ")" + m[i]);
 		}
+		System.out.println();
 
 	}
-	
 
-	public static void mostrarmatriz(int [][] m) {
+	public static void mostrarmatriz(int[][] m) {
 
-		for(int i=0; i<m.length; i++) {
-			for(int j=0; j<m[i].length; j++) {
-				System.out.print(m[i][j]+"\t");
+		for (int[] element : m) {
+			for (int j = 0; j < element.length; j++) {
+				System.out.print(element[j] + "\t");
 			}
-			System.out.println(); 
+			System.out.println();
 
 		}
 
@@ -35,27 +32,34 @@ public class MenuDistribucionAula {
 
 	/**
 	 * Funcion que determina si un valor se encutnra almacenado en una matriz
-	 * @param m - array bidimensional de valores enteros
-	 * @param valor - valor enero (que vamos a ver si se encuenta ya o no almacenada en la matriz)
-	 * @param fila- fila de la matriz hasta la que comparamos los valores
-	 * @param columna - columna de la matriz, dentro de la fila indicada como parametro, 
-	 * @return true si N se encuentra entre los valores almacenados en la matriz y false en caso contrario
+	 *
+	 * @param m       - array bidimensional de valores enteros
+	 * @param valor   - valor enero (que vamos a ver si se encuenta ya o no
+	 *                almacenada en la matriz)
+	 * @param fila-   fila de la matriz hasta la que comparamos los valores
+	 * @param columna - columna de la matriz, dentro de la fila indicada como
+	 *                parametro,
+	 * @return true si N se encuentra entre los valores almacenados en la matriz y
+	 *         false en caso contrario
 	 */
 
-	public static boolean encontrado(int [][] m, int valor, int fila, int columna) {
+	public static boolean encontrado(int[][] m, int valor, int fila, int columna) {
 		int i;
-		//Recorremos todos los valores almacenados en filas anteriores
-		for(i=0; i<fila; i++) {
-			for(int j=0; j<m[0].length; j++) 
-
-				if(m[i][j]==valor) 
-					return true;	
+		// Recorremos todos los valores almacenados en filas anteriores
+		for (i = 0; i < fila; i++) {
+			for (int j = 0; j < m[0].length; j++) {
+				if (m[i][j] == valor) {
+					return true;
+				}
+			}
 		}
 
-		//Recorremos la fila en la que se encuentra el elemento 
-		for(int j=0; j<columna; j++) 
-			if(m[i][j]==valor) 
+		// Recorremos la fila en la que se encuentra el elemento
+		for (int j = 0; j < columna; j++) {
+			if (m[i][j] == valor) {
 				return true;
+			}
+		}
 
 		return false;
 	}
@@ -94,82 +98,89 @@ public class MenuDistribucionAula {
 
 	public static void main(String[] args) {
 
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
-		int opcion,a,b;
-		
-		boolean introducido=false;
+		int opcion, a, b;
+
+		boolean introducido = false;
 		try {
 
 			do {
 				menu();
 				do {
 
-					opcion=sc.nextInt();
+					opcion = sc.nextInt();
 
-					switch(opcion) {
-					case 1: System.out.println("\nMostrar clase");
-					
-					String [] clase= {"Jesus C.", "Alberto C.", "Marlon C.","Hamza D.","Adam D.",
-							  "Jose G.", "Angel G.", "Mehdi L.","Joaquin L", "Rafael L.",
-							  "Fran L.","Elena L.","Uriel L.", "Alvaro L.", "Uriel M.", 
-							  "Felix R.","JAPeñalver", "Jesus P.", "Erik P.","Eduardo P.", 
-							  "Ivan S.", "Jalil T.", "Alejandro","Adrian V."}; 
-					
-				
-					
-					System.out.println("\n"+a+" + "+b+" = "+(a+b));break;
-					case 2: System.out.println("\nRESTA");
-					System.out.print("Dime el minuendo: ");
-					a=sc.nextInt();
-					System.out.print("Dime el sustraendo: ");
-					b=sc.nextInt();
-					System.out.println("\n"+a+" - "+b+" = "+(a-b));break;
-					case 3: System.out.println("\nMULTIPLICACION");
-					System.out.print("Dime el multiplicando: ");
-					a=sc.nextInt();
-					System.out.print("Dime el multiplicador: ");
-					b=sc.nextInt();
-					System.out.println("\n"+a+" X "+b+" = "+(a*b));break;
-					case 4: System.out.println("\nDIVISION");
-					System.out.print("Dime el divisor: ");
-					a=sc.nextInt();
-					System.out.print("Dime el dividendo: ");
-					b=sc.nextInt();
-					if(b!=0) 
-						System.out.println("\n"+a+" / "+b+" = "+((float)a/b));
-					else 
-						System.out.println("El numero no se puede dividir entre 0");
-					break;
-					case 5: System.out.println("\nPOTENCIA");
-					System.out.print("Dime la base: ");
-					a=sc.nextInt();
-					System.out.print("Dime la potencia: ");
-					b=sc.nextInt();
-					System.out.println("\n"+a+" ^ "+b+" = "+(int)Math.pow(a, b));break;
-					case 6: System.out.println("\nFIN DEL PROGRAMA...ADIOS");break;
-					default: System.out.println("Opcion elegida no valida");break;
+					switch (opcion) {
+					case 1:
+						System.out.println("\nMostrar clase");
 
+						String[] clase = { "Jesus C.", "Alberto C.", "Marlon C.", "Hamza D.", "Adam D.", "Jose G.",
+								"Angel G.", "Mehdi L.", "Joaquin L", "Rafael L.", "Fran L.", "Elena L.", "Uriel L.",
+								"Alvaro L.", "Uriel M.", "Felix R.", "JAPeñalver", "Jesus P.", "Erik P.", "Eduardo P.",
+								"Ivan S.", "Jalil T.", "Alejandro", "Adrian V." };
+
+						System.out.println();
+						break;
+					case 2:
+						System.out.println("\nRESTA");
+						System.out.print("Dime el minuendo: ");
+						a = sc.nextInt();
+						System.out.print("Dime el sustraendo: ");
+						b = sc.nextInt();
+						System.out.println("\n" + a + " - " + b + " = " + (a - b));
+						break;
+					case 3:
+						System.out.println("\nMULTIPLICACION");
+						System.out.print("Dime el multiplicando: ");
+						a = sc.nextInt();
+						System.out.print("Dime el multiplicador: ");
+						b = sc.nextInt();
+						System.out.println("\n" + a + " X " + b + " = " + (a * b));
+						break;
+					case 4:
+						System.out.println("\nDIVISION");
+						System.out.print("Dime el divisor: ");
+						a = sc.nextInt();
+						System.out.print("Dime el dividendo: ");
+						b = sc.nextInt();
+						if (b != 0) {
+							System.out.println("\n" + a + " / " + b + " = " + ((float) a / b));
+						} else {
+							System.out.println("El numero no se puede dividir entre 0");
+						}
+						break;
+					case 5:
+						System.out.println("\nPOTENCIA");
+						System.out.print("Dime la base: ");
+						a = sc.nextInt();
+						System.out.print("Dime la potencia: ");
+						b = sc.nextInt();
+						System.out.println("\n" + a + " ^ " + b + " = " + (int) Math.pow(a, b));
+						break;
+					case 6:
+						System.out.println("\nFIN DEL PROGRAMA...ADIOS");
+						break;
+					default:
+						System.out.println("Opcion elegida no valida");
+						break;
 
 					}
 
-				}while(opcion<1 || opcion>6);
+				} while (opcion < 1 || opcion > 6);
 
-			}while(opcion!=6);
+			} while (opcion != 6);
 
-		}catch(InputMismatchException lupita) {
+		} catch (InputMismatchException lupita) {
 			System.out.println("Error, dato introducido no valido");
 
-		}catch(AssertionError ea) {
+		} catch (AssertionError ea) {
 			System.out.println(ea.getMessage());
 
-		}finally {
+		} finally {
 			sc.close();
 		}
 
 	}
 
-
 }
-
-

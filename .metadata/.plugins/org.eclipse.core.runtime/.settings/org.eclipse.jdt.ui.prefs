@@ -7,8 +7,10 @@ editor_folding_enabled=false
 editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup=true
 hoverModifierMasks=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;0;org.eclipse.jdt.ui.ProblemHover;0;org.eclipse.jdt.ui.NLSStringHover;327680;org.eclipse.jdt.ui.JavadocHover;393216;org.eclipse.jdt.ui.AnnotationHover;0;org.eclipse.jdt.ui.JavaSourceHover;131072;org.eclipse.jdt.ui.JavaConstantHover;0;
 hoverModifiers=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;\!0;org.eclipse.jdt.ui.ProblemHover;\!0;org.eclipse.jdt.ui.NLSStringHover;Ctrl+Alt;org.eclipse.jdt.ui.JavadocHover;Ctrl+May\u00FAs;org.eclipse.jdt.ui.AnnotationHover;\!0;org.eclipse.jdt.ui.JavaSourceHover;May\u00FAs;org.eclipse.jdt.ui.JavaConstantHover;\!0;
-lastRecentlyUsedFilters=org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter,org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*,org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter,
+lastRecentlyUsedFilters=org.eclipse.jdt.ui.PackageExplorer.LibraryFilter,org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter,
 org.eclipse.jdt.internal.ui.navigator.layout=1
+org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter=true
+org.eclipse.jdt.ui.PackageExplorer.LibraryFilter=true
 org.eclipse.jdt.ui.formatterprofiles.version=23
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java" deleted\="false" description\="Scanner con try y catch" enabled\="true" name\="sc">Scanner sc \=new Scanner(System.in);&\#13;\r\n\t\t&\#13;\r\n\t\ttry{&\#13;\r\n\t\t\t&\#13;\r\n\t\t\t&\#13;\r\n\t\t}catch(InputMismatchException lupita){&\#13;\r\n\t\t\tSystem.out.println("Dato incorrecto, no valido");&\#13;\r\n\t\t}sc.close();</template><template autoinsert\="true" context\="java" deleted\="false" description\="elena como nombre" enabled\="true" name\="elena">elena es una maquinarias</template></templates>
 sourceHoverBackgroundColor=47,47,47
