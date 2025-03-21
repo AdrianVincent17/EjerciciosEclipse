@@ -33,7 +33,7 @@ public class Television extends Electrodomestico {
 	 * @param peso
 	 */
 	public Television(int precio_base, int peso) {
-		super(precio_base, peso, consumo_energetico_def, color_def);
+		super(precio_base, peso, CONSUMO_ENERGETICO_DEF, COLOR_DEF);
 		this.pulgadas = pulgadas_def;
 	}
 

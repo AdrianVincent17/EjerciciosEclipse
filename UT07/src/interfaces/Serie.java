@@ -2,36 +2,40 @@ package interfaces;
 
 public class Serie implements Entregable {
 	// constatnes
-	private final static int num_temp_def = 3;
+	private final static int NUM_TEMP_DEF = 3; // numero de temporadas por defecto
 
 	// atributos
-	private String titulo;
-	private int num_temp;
-	private String genero;
-	private String creador;
-	private boolean prestado;
+	private String titulo; // titulo de la serie
+	private int num_temp; // numero de temporadas
+	private String genero; // genero de la serie
+	private String creador; // creador de la serie
+	private boolean prestado; // atributo que dira si esta prestado o no
 
 	/**
 	 * Constructor por defecto
 	 */
 	public Serie() {
-		this("", num_temp_def, "", "");
+		this("", NUM_TEMP_DEF, "", "");
 
 	}
 
 	/**
-	 * @param titulo
-	 * @param creador
+	 * Constructor con dos atributos como parametros
+	 * 
+	 * @param titulo  de la serie
+	 * @param creador de la serie
 	 */
 	public Serie(String titulo, String creador) {
-		this(titulo, num_temp_def, "", creador);
+		this(titulo, NUM_TEMP_DEF, "", creador);
 	}
 
 	/**
-	 * @param titulo
-	 * @param num_temp
-	 * @param genero
-	 * @param creador
+	 * Construcotr con todos los atributos como parametros
+	 * 
+	 * @param titulo   de la serie
+	 * @param num_temp de la serie
+	 * @param genero   de la serie
+	 * @param creador  de la serie
 	 */
 	public Serie(String titulo, int num_temp, String genero, String creador) {
 		this.titulo = titulo;
@@ -42,77 +46,106 @@ public class Serie implements Entregable {
 	}
 
 	/**
-	 * @return el titulo
+	 * devuelve el titulo de la serie
+	 * 
+	 * @return titulo
 	 */
 	public String getTitulo() {
 		return titulo;
 	}
 
 	/**
-	 * @param titulo el titulo a establecer
+	 * establece el titulo de la serie
+	 * 
+	 * @param titulo a establecer
 	 */
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
 	/**
-	 * @return el num_temp
+	 * devuelve el numero de temporadas de la serie
+	 * 
+	 * @return numero de temporadas
 	 */
 	public int getNum_temp() {
 		return num_temp;
 	}
 
 	/**
-	 * @param num_temp el num_temp a establecer
+	 * establece el numero de termporadas de la serie
+	 * 
+	 * @param numero de temporadas a establecer
 	 */
 	public void setNum_temp(int num_temp) {
 		this.num_temp = num_temp;
 	}
 
 	/**
-	 * @return el genero
+	 * devuelve el genero de la serie
+	 * 
+	 * @return genero de la serie
 	 */
 	public String getGenero() {
 		return genero;
 	}
 
 	/**
-	 * @param genero el genero a establecer
+	 * Establece el genero de la serie
+	 * 
+	 * @param genero a establecer
 	 */
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
 
 	/**
-	 * @return el creador
+	 * devuelve el creador de la serie
+	 * 
+	 * @return creador de la serie
 	 */
 	public String getCreador() {
 		return creador;
 	}
 
 	/**
-	 * @param creador el creador a establecer
+	 * establece el creador de la serie
+	 * 
+	 * @param creador a establecer
 	 */
 	public void setCreador(String creador) {
 		this.creador = creador;
 	}
 
+	/**
+	 * metodo que cambia el estado de prestado a true, osea presta el articulo
+	 */
 	@Override
 	public void entregar() {
 		prestado = true;
 
 	}
 
+	/**
+	 * metodo que cambia el estado de prestado a false, osea deuvelve el articulo
+	 */
 	@Override
 	public void devolver() {
 		prestado = false;
 
 	}
 
+	/**
+	 * metodo que devuelve si esta prestado o no
+	 */
 	@Override
 	public boolean isprestado() {
 		return prestado;
 	}
+
+	/**
+	 * metodo que devuelve la informacion de la serie
+	 */
 
 	@Override
 	public String toString() {

@@ -3,41 +3,37 @@ package herencia;
 public class Lavadora extends Electrodomestico {
 
 	// constantes
-	public final static int carga_def = 5;
+	private final static int CARGA_DEF = 5; // carga de la lavadora por defecto
 
 	// atributos
-	private int carga;
+	private int carga; // carga de la lavadora
 
 	/**
 	 * Constructor por defecto
 	 */
 	public Lavadora() {
-		super();
-		this.carga = carga_def;
+		this(PRECIO_BASE_DEF, PESO_DEF, CONSUMO_ENERGETICO_DEF, COLOR_DEF, CARGA_DEF);
 	}
 
 	/**
-	 * Constructor con dos parametros heredados de la superclase y el resto por
-	 * defecto
-	 *
-	 * @param precio_base introducido como parametro
-	 * @param peso        introducido como parametro
+	 * Contructor con dos atributos como parametros ademas de los heredados de la
+	 * superclase
 	 */
-	public Lavadora(int precio_base, int peso) {
-		super(precio_base, peso, consumo_energetico_def, color_def);
-		this.carga = carga_def;
+	public Lavadora(double precio_base, double peso) {
+		this(precio_base, peso, CONSUMO_ENERGETICO_DEF, COLOR_DEF, CARGA_DEF);
 	}
 
 	/**
 	 * Constructor con todos los atributos como parametros incluidos los heredados
 	 *
-	 * @param precio_base        como parametro
-	 * @param peso               como parametro
-	 * @param consumo_energetico como parametro
-	 * @param color              como parametro
+	 * @param precioBaseDef      de la lavadora
+	 * @param pesoDef            de la lavadora
+	 * @param consumo_energetico de la lavadora
+	 * @param color              de la lavadora
+	 * @param carga              de la lavadora
 	 */
-	public Lavadora(int precio_base, int peso, char consumo_energetico, String color, int carga) {
-		super(precio_base, peso, consumo_energetico, color);
+	public Lavadora(double precioBaseDef, double pesoDef, char consumo_energetico, String color, int carga) {
+		super(precioBaseDef, pesoDef, consumo_energetico, color);
 		this.carga = carga;
 	}
 
@@ -51,26 +47,19 @@ public class Lavadora extends Electrodomestico {
 	}
 
 	/**
-	 * metodo que establece la carga de la lavadora
-	 *
-	 * @param carga a establecer
-	 */
-	public void setCarga(int carga) {
-		this.carga = carga;
-	}
-
-	/**
 	 * metodo que devuelve el precio final de la lavadora con las nuevas condiciones
 	 * empleadas
 	 */
+
 	@Override
 	public double preciofinal() {
-		double preciofinal = super.preciofinal();
+
+		double preciofin = super.preciofinal();
 		if (carga > 30) {
-			preciofinal += 50;
+			preciofin += 50;
 		}
 
-		return preciofinal;
+		return preciofin;
 
 	}
 
@@ -79,8 +68,8 @@ public class Lavadora extends Electrodomestico {
 	 */
 	@Override
 	public String toString() {
-		return "color: " + getColor() + "\npeso: " + getPeso() + " kg" + "\nconsumo energetico: "
-				+ getConsumo_energetico() + "\ncarga: " + carga + " kg" + "\nprecio final: " + preciofinal() + " €\n";
+		return "Lavadora: " + color + "\npeso: " + peso + " kg" + "\nconsumo energetico: " + consumo_energetico
+				+ "\ncarga: " + carga + " kg" + "\nprecio final: " + preciofinal() + " €\n";
 	}
 
 }
