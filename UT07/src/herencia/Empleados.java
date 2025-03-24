@@ -3,7 +3,7 @@ package herencia;
 abstract class Empleados {
 
 	// constantes
-	private static final int PLUS = 300; // contante que define el plus del salario
+	protected static final int PLUS = 300; // contante que define el plus del salario
 
 	// Atributos
 	private String nombre; // nombre del empleado
@@ -62,7 +62,7 @@ abstract class Empleados {
 	/**
 	 * @param salario el salario a establecer
 	 */
-	public void setSalario(int salario) {
+	public void setSalario(double salario) {
 		this.salario = salario;
 	}
 

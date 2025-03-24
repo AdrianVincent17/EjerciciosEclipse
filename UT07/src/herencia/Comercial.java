@@ -32,8 +32,11 @@ public class Comercial extends Empleados {
 	@Override
 	public boolean PLUS() {
 
-		if (getEdad() > 30 && comision > 200)
+		if (getEdad() > 30 && comision > 200) {
+			double nuevosalario = super.getSalario() + super.PLUS;
+			super.setSalario(nuevosalario);
 			return true;
+		}
 		return false;
 	}
 
