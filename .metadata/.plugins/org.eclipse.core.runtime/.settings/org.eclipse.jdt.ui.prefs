@@ -8,6 +8,7 @@ editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup=true
 hoverModifierMasks=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;0;org.eclipse.jdt.ui.ProblemHover;0;org.eclipse.jdt.ui.NLSStringHover;327680;org.eclipse.jdt.ui.JavadocHover;393216;org.eclipse.jdt.ui.AnnotationHover;0;org.eclipse.jdt.ui.JavaSourceHover;131072;org.eclipse.jdt.ui.JavaConstantHover;0;
 hoverModifiers=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;\!0;org.eclipse.jdt.ui.ProblemHover;\!0;org.eclipse.jdt.ui.NLSStringHover;Ctrl+Alt;org.eclipse.jdt.ui.JavadocHover;Ctrl+May\u00FAs;org.eclipse.jdt.ui.AnnotationHover;\!0;org.eclipse.jdt.ui.JavaSourceHover;May\u00FAs;org.eclipse.jdt.ui.JavaConstantHover;\!0;
 lastRecentlyUsedFilters=org.eclipse.jdt.ui.PackageExplorer.LibraryFilter,org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter,
+markOccurrences=false
 org.eclipse.jdt.internal.ui.navigator.layout=1
 org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter=true
 org.eclipse.jdt.ui.PackageExplorer.LibraryFilter=true
