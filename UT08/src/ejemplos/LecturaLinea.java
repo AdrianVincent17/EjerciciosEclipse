@@ -15,7 +15,7 @@ public class LecturaLinea {
 			Scanner sc = new Scanner(f);
 			int conta = 1;
 			while (sc.hasNextLine()) {
-				String linea = sc.nextLine();
+				String linea = sc.nextLine().toUpperCase();
 				System.out.println("(" + conta + ")" + linea);
 				conta++;
 			}

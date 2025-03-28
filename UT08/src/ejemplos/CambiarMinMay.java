@@ -3,7 +3,7 @@ package ejemplos;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LecturaCaracter {
+public class CambiarMinMay {
 
 	public static void main(String[] args) {
 		FileReader fr = null;
@@ -13,11 +13,15 @@ public class LecturaCaracter {
 			// Apertura del fichero
 			fr = new FileReader("C:\\Users\\AdrianV\\Desktop\\Quijote.txt");
 
-			// lectura
+			// lectura del caracter
 			int valor = fr.read();
 
 			while (valor != -1) {
 
+				if (valor >= 65 && valor <= 90)
+					valor += 32;
+				else if (valor >= 97 && valor <= 122)
+					valor -= 32;
 				System.out.print((char) valor);
 				valor = fr.read();
 			}

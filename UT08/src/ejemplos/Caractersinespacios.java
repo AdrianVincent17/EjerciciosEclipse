@@ -3,9 +3,10 @@ package ejemplos;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LecturaCaracter {
+public class Caractersinespacios {
 
 	public static void main(String[] args) {
+
 		FileReader fr = null;
 
 		try {
@@ -13,12 +14,14 @@ public class LecturaCaracter {
 			// Apertura del fichero
 			fr = new FileReader("C:\\Users\\AdrianV\\Desktop\\Quijote.txt");
 
-			// lectura
+			// lectura del caracter
 			int valor = fr.read();
 
 			while (valor != -1) {
 
-				System.out.print((char) valor);
+				if (valor != ' ')
+					System.out.print((char) valor);
+
 				valor = fr.read();
 			}
 
