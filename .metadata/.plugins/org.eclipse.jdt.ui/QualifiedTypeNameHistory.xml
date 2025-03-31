@@ -11,4 +11,5 @@
     <fullyQualifiedTypeName name="ejercicios.Cadena"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="java.net.SecureCacheResponse"/>
 </qualifiedTypeNameHistroy>
