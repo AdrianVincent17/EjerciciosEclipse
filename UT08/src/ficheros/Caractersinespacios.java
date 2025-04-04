@@ -1,11 +1,12 @@
-package ejemplos;
+package ficheros;
 
 import java.io.FileReader;
 import java.io.IOException;
 
-public class CambiarMinMay {
+public class Caractersinespacios {
 
 	public static void main(String[] args) {
+
 		FileReader fr = null;
 
 		try {
@@ -18,11 +19,9 @@ public class CambiarMinMay {
 
 			while (valor != -1) {
 
-				if (valor >= 65 && valor <= 90)
-					valor += 32;
-				else if (valor >= 97 && valor <= 122)
-					valor -= 32;
-				System.out.print((char) valor);
+				if (valor != ' ')
+					System.out.print((char) valor);
+
 				valor = fr.read();
 			}
 

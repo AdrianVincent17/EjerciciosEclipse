@@ -1,4 +1,4 @@
-package ejemplos;
+package ficheros;
 
 import java.io.FileReader;
 import java.io.IOException;
