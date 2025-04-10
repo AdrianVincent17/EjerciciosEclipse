@@ -46,6 +46,15 @@ public class Ej02 extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == boton) {
+			try {
+				int n = Integer.parseInt(campo.getText());
+				if (n % 2 == 0)
+					setTitle("PAR");
+				else
+					setTitle("IMPAR");
+			} catch (Exception lupita) {
+				setTitle("ERROR");
+			}
 
 		}
 
