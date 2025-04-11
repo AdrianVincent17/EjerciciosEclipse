@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 public class Dado extends JFrame implements ActionListener {
@@ -19,12 +20,13 @@ public class Dado extends JFrame implements ActionListener {
 
 		setLayout(new BorderLayout(5, 10));
 
-		numeros = new JLabel("?", JLabel.CENTER);
+		numeros = new JLabel("?");
+		numeros.setHorizontalAlignment(SwingConstants.CENTER);
 		numeros.setFont(new Font("Arial", Font.BOLD, 150));
-		add(numeros);
+		add(numeros, BorderLayout.CENTER);
 
 		tirada = new JButton("Tirar");
-		tirada.setFont(new Font("new Times Roman", Font.ITALIC, 50));
+		tirada.setFont(new Font("Times New Roman", Font.ITALIC, 50));
 		add(tirada, BorderLayout.SOUTH);
 		tirada.addActionListener(this);
 
@@ -45,7 +47,7 @@ public class Dado extends JFrame implements ActionListener {
 
 		Dado d = new Dado();
 
-		d.setTitle("Tira el dado");
+		d.setTitle("Dado");
 		d.setLocationRelativeTo(null);
 		d.setSize(300, 300);
 		d.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

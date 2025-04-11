@@ -19,7 +19,7 @@ public class Dado1 extends JFrame implements ActionListener {
 
 		tirada = new JButton("?");
 		add(tirada);
-		tirada.setFont(new Font("Arial", Font.BOLD, 160));
+		tirada.setFont(new Font("Comic Sans MS", Font.BOLD, 160));
 		tirada.addActionListener(this);
 
 	}
@@ -39,7 +39,7 @@ public class Dado1 extends JFrame implements ActionListener {
 
 		Dado1 d = new Dado1();
 
-		d.setTitle("Tira el dado");
+		d.setTitle("Dado 1");
 		d.setLocationRelativeTo(null);
 		d.setSize(300, 300);
 		d.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
