@@ -7,19 +7,25 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.WindowConstants;
 
-public class Dado1 extends JFrame implements ActionListener {
+public class Dado extends JFrame implements ActionListener {
 
+	private JLabel numeros;
 	private JButton tirada;
 
-	public Dado1() {
+	public Dado() {
 
 		setLayout(new BorderLayout(5, 10));
 
-		tirada = new JButton("?");
-		add(tirada);
-		tirada.setFont(new Font("Arial", Font.BOLD, 160));
+		numeros = new JLabel("?", JLabel.CENTER);
+		numeros.setFont(new Font("Arial", Font.BOLD, 150));
+		add(numeros);
+
+		tirada = new JButton("Tirar");
+		tirada.setFont(new Font("new Times Roman", Font.ITALIC, 50));
+		add(tirada, BorderLayout.SOUTH);
 		tirada.addActionListener(this);
 
 	}
@@ -37,7 +43,7 @@ public class Dado1 extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
 
-		Dado1 d = new Dado1();
+		Dado d = new Dado();
 
 		d.setTitle("Tira el dado");
 		d.setLocationRelativeTo(null);
@@ -50,8 +56,7 @@ public class Dado1 extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == tirada) {
 			String ale = Integer.toString(aleatorio(6));
-			tirada.setText(ale);
+			numeros.setText(ale);
 		}
 	}
-
 }
