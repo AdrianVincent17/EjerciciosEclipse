@@ -9,13 +9,13 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
-public class Ej1 extends JFrame implements ActionListener {
+public class Ej01 extends JFrame implements ActionListener {
 
 	private JLabel nombre;
 	private JTextField campotexto;
 	private JButton boton;
 
-	public Ej1() {
+	public Ej01() {
 
 		setLayout(null);
 
@@ -35,7 +35,7 @@ public class Ej1 extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
 
-		Ej1 e = new Ej1();
+		Ej01 e = new Ej01();
 
 		e.setSize(275, 150);
 		e.setVisible(true);
