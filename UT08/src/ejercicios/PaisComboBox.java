@@ -67,6 +67,7 @@ public class PaisComboBox extends JFrame implements ItemListener {
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		if (e.getSource() == combo) {
+
 			// Para extraer el contenido del item seleccionado llamamos al metodo
 			// getSelectedItem(),
 			// que retorna un objeto de la clase Object, por lo que debemos transformalo a
