@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="componentes.Ventana_JCheckBox"/>
     <fullyQualifiedTypeName name="componentes.Ventana_RadioButton"/>
     <fullyQualifiedTypeName name="java.lang.Enum"/>
-    <fullyQualifiedTypeName name="layout.Ejemplo_gridlayout"/>
     <fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
     <fullyQualifiedTypeName name="java.awt.Font"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
@@ -43,12 +42,18 @@
     <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
     <fullyQualifiedTypeName name="changeListener.Resoluciones"/>
     <fullyQualifiedTypeName name="pruebas.Ej01"/>
-    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
-    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
-    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
-    <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
     <fullyQualifiedTypeName name="pruebas.Ej02"/>
     <fullyQualifiedTypeName name="pruebas.Ej03"/>
+    <fullyQualifiedTypeName name="pruebas.Worlist"/>
+    <fullyQualifiedTypeName name="pruebas.Wordlist"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="pruebas.Diccionario"/>
+    <fullyQualifiedTypeName name="layout.Ejemplo_gridlayout"/>
+    <fullyQualifiedTypeName name="layout.Ejemplo_BorderLayout"/>
 </qualifiedTypeNameHistroy>
