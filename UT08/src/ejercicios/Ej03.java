@@ -1,4 +1,4 @@
-package pruebas;
+package ejercicios;
 
 import java.awt.FlowLayout;
 import java.awt.GridLayout;

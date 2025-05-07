@@ -1,37 +1,39 @@
-package pruebas;
+package ejercicios;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.Scanner;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class Wordlist extends JFrame implements ActionListener {
 
-	private JButton boton;
 	private JLabel label;
+	private JButton boton;
 	private JTextField campo;
 
 	public Wordlist() {
 
 		setLayout(null);
 
+		label = new JLabel("Enter a word to search: ");
+		label.setBounds(50, 40, 150, 25);
+		add(label);
+
 		campo = new JTextField();
-		campo.setBounds(20, 30, 120, 30);
+		campo.setBounds(50, 70, 300, 50);
 		add(campo);
 
-		boton = new JButton("TRADUCCION");
-		boton.setBounds(150, 30, 120, 30);
+		boton = new JButton(new ImageIcon("C:\\Users\\Asun\\Downloads\\lupa01.png"));
+		boton.setBounds(352, 70, 70, 50);
 		add(boton);
 		boton.addActionListener(this);
-
-		label = new JLabel("");
-		label.setBounds(280, 30, 200, 30);
-		add(label);
 
 	}
 
@@ -39,44 +41,46 @@ public class Wordlist extends JFrame implements ActionListener {
 
 		Wordlist w = new Wordlist();
 
+		w.setTitle("Wordlist");
 		w.setVisible(true);
-		w.setLocationRelativeTo(null);
 		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		w.setTitle("Traductor ingles/español");
-		w.setSize(450, 150);
+		w.setLocationRelativeTo(null);
+		w.setSize(500, 220);
+		w.setResizable(false);
 
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+
 		if (e.getSource() == boton) {
 			if (campo.getText().isBlank()) {
-				label.setText("Introduce una palabra");
+				JOptionPane.showMessageDialog(null, "Enter a Word please", "Warning", JOptionPane.WARNING_MESSAGE);
 			} else {
 				try {
 					String word = campo.getText();
-					File f = new File("C:\\Users\\Asun\\Downloads\\dictionary.txt");
 					boolean encontrado = false;
-
+					File f = new File("C:\\Users\\Asun\\Downloads\\wordlist.txt");
 					Scanner s = new Scanner(f);
 
 					while (s.hasNext() && !encontrado) {
 						String linea = s.nextLine();
-						String palabra = linea.substring(0, linea.indexOf('='));
-						if (word.compareToIgnoreCase(palabra) == 0) {
-							String traduccion = linea.substring(linea.indexOf('=') + 1);
-							label.setText(traduccion);
+						if (word.compareToIgnoreCase(linea) == 0) {
 							encontrado = true;
 						}
-
 					}
 					s.close();
-					if (!encontrado) {
-						label.setText("La palabra no esta ");
+					if (encontrado) {
+						JOptionPane.showMessageDialog(null, "The word is found in our wordlist", campo.getText(),
+								JOptionPane.INFORMATION_MESSAGE);
+					} else {
+						JOptionPane.showMessageDialog(null, "The word is not found in our wordlist", campo.getText(),
+								JOptionPane.INFORMATION_MESSAGE);
 					}
 
 				} catch (Exception e1) {
-					label.setText(e1.getMessage());
+					setTitle(e1.getMessage());
+
 				}
 			}
 		}

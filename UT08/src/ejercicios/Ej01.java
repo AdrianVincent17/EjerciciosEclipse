@@ -1,4 +1,4 @@
-package pruebas;
+package ejercicios;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
