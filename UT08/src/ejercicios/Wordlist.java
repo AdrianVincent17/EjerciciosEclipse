@@ -1,5 +1,7 @@
 package ejercicios;
 
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -10,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Wordlist extends JFrame implements ActionListener {
@@ -17,23 +20,27 @@ public class Wordlist extends JFrame implements ActionListener {
 	private JLabel label;
 	private JButton boton;
 	private JTextField campo;
+	private JPanel panel;
 
 	public Wordlist() {
 
-		setLayout(null);
+		setLayout(new FlowLayout(FlowLayout.CENTER, 10, 40));
+
+		panel = new JPanel();
+		panel.setLayout(new BorderLayout(5, 10));
 
 		label = new JLabel("Enter a word to search: ");
-		label.setBounds(50, 40, 150, 25);
-		add(label);
+		panel.add(label, BorderLayout.NORTH);
 
-		campo = new JTextField();
-		campo.setBounds(50, 70, 300, 50);
-		add(campo);
+		campo = new JTextField(20);
+		panel.add(campo, BorderLayout.CENTER);
 
 		boton = new JButton(new ImageIcon("C:\\Users\\Asun\\Downloads\\lupa01.png"));
-		boton.setBounds(352, 70, 70, 50);
-		add(boton);
+
+		panel.add(boton, BorderLayout.EAST);
 		boton.addActionListener(this);
+
+		add(panel);
 
 	}
 
