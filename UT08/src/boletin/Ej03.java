@@ -33,17 +33,15 @@ public class Ej03 extends JFrame implements ActionListener {
 
 		setLayout(new FlowLayout(FlowLayout.CENTER, 50, 40));
 
-		ptotal = new JPanel();
-		ptotal.setLayout(new GridLayout(2, 0, 5, 20));
-		add(ptotal);
+		
 
 		plabels = new JPanel();
 		plabels.setLayout(new GridLayout(2, 2, 10, 10));
-		ptotal.add(plabels);
+		add(plabels);
 
 		pbotones = new JPanel();
 		pbotones.setLayout(new GridLayout(0, 3, 10, 5));
-		ptotal.add(pbotones);
+		add(pbotones);
 
 		contacto = new JLabel("Nombre del contacto: ");
 		plabels.add(contacto);
