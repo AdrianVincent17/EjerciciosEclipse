@@ -26,21 +26,19 @@ public class Ej03 extends JFrame implements ActionListener {
 	private JLabel contacto, telefono;
 	private JTextField campocontacto, campotelefono;
 	private JButton nuevo, buscar, limpiar;
-	private JPanel plabels, pbotones, ptotal;
-	private static String FICHERO = "C:\\Users\\AdrianV\\Desktop\\MiAgenda2.txt";
+	private JPanel plabels, pbotones;
+	private static String FICHERO = "C:\\Users\\Asun\\Desktop\\Agenda.txt";
 
 	public Ej03() {
 
-		setLayout(new FlowLayout(FlowLayout.CENTER, 50, 40));
-
-		
+		setLayout(new FlowLayout(FlowLayout.CENTER, 50, 30));
 
 		plabels = new JPanel();
 		plabels.setLayout(new GridLayout(2, 2, 10, 10));
 		add(plabels);
 
 		pbotones = new JPanel();
-		pbotones.setLayout(new GridLayout(0, 3, 10, 5));
+		pbotones.setLayout(new GridLayout(0, 3, 10, 0));
 		add(pbotones);
 
 		contacto = new JLabel("Nombre del contacto: ");
@@ -77,7 +75,7 @@ public class Ej03 extends JFrame implements ActionListener {
 		e.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		e.setLocationRelativeTo(null);
 		e.setTitle("Agenda telefonica");
-		e.setSize(500, 250);
+		e.setSize(400, 250);
 
 	}
 
@@ -92,26 +90,14 @@ public class Ej03 extends JFrame implements ActionListener {
 
 		FileWriter fw = null;
 		PrintWriter pw = null;
-		boolean encontrado = false;
-		File f = new File(FICHERO);
+
 		try {
 			fw = new FileWriter(FICHERO, true);
 			pw = new PrintWriter(fw);
-
-			Scanner s = new Scanner(f);
-			while (s.hasNextLine() && !encontrado) {
-				String linea = s.nextLine();
-				String nameagenda = linea.substring(0, linea.indexOf('>')).trim();
-				if (name.compareToIgnoreCase(nameagenda) == 0) {
-					encontrado = true;
-				}
-			}
-
 			pw.println(name + " > " + tlf);
 
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "El contenido ya se encuentra en la agenda", "Aviso",
-					JOptionPane.WARNING_MESSAGE);
+			System.out.println("Se ha producido un error con el archivo de la agenda");
 		} finally {
 			try {
 				if (fw != null)
@@ -149,8 +135,7 @@ public class Ej03 extends JFrame implements ActionListener {
 				}
 			}
 		} catch (FileNotFoundException lupita) {
-			JOptionPane.showMessageDialog(null, "El contenido indicado no se encuentra en la agenda", "Buscar",
-					JOptionPane.INFORMATION_MESSAGE);
+			return 0;
 		}
 
 		return res;
@@ -170,13 +155,17 @@ public class Ej03 extends JFrame implements ActionListener {
 							JOptionPane.ERROR_MESSAGE);
 				} else {
 					int numero = Integer.parseInt(campotelefono.getText());
-					boolean encontrado = false;
+					if (campotelefono.getText().length() < 9) {
+						JOptionPane.showMessageDialog(null, "El telefono debe tener al menos 9 digitos", "Aviso",
+								JOptionPane.INFORMATION_MESSAGE);
+					} else {
+						addContacto(nombre, numero);
+						campocontacto.setText("");
+						campotelefono.setText("");
+						JOptionPane.showMessageDialog(null, "El nuevo contacto ha sido guardado en la agenda",
+								"Nuevo Contacto", JOptionPane.INFORMATION_MESSAGE);
+					}
 
-					addContacto(nombre, numero);
-					campocontacto.setText("");
-					campotelefono.setText("");
-					JOptionPane.showMessageDialog(null, "El nuevo contacto ha sido guardado en la agenda",
-							"Nuevo Contacto", JOptionPane.INFORMATION_MESSAGE);
 				}
 
 			}
@@ -197,7 +186,8 @@ public class Ej03 extends JFrame implements ActionListener {
 				if (telefono != 0) {
 					campotelefono.setText(String.valueOf(telefono));
 				} else {
-					JOptionPane.showConfirmDialog(null, "", "", JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "El telefono no se encuentra en la agenda", "Aviso",
+							JOptionPane.INFORMATION_MESSAGE);
 				}
 
 			}
