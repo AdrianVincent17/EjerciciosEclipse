@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="actionListener.ejercicios.Ej02"/>
-    <fullyQualifiedTypeName name="actionListener.ConversorDecimalRomano"/>
     <fullyQualifiedTypeName name="actionListener.ConversorDecimalRomanov2"/>
     <fullyQualifiedTypeName name="actionListener.TecladoNumerico"/>
     <fullyQualifiedTypeName name="java.lang.VerifyError"/>
@@ -46,7 +44,6 @@
     <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
     <fullyQualifiedTypeName name="javax.swing.JMenu"/>
     <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
-    <fullyQualifiedTypeName name="boletin.Ej02"/>
     <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
     <fullyQualifiedTypeName name="java.awt.Font"/>
     <fullyQualifiedTypeName name="javax.swing.WindowConstants"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="boletin.Ej03"/>
     <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="ejercicios.ForzadoContraseña"/>
+    <fullyQualifiedTypeName name="ejercicios.requisitos"/>
+    <fullyQualifiedTypeName name="boletin.Ej02"/>
 </qualifiedTypeNameHistroy>

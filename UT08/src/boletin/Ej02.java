@@ -1,6 +1,6 @@
 package boletin;
 
-import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -15,35 +15,67 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.WindowConstants;
 
 public class Ej02 extends JFrame implements ActionListener {
 
-	/*
-	 * Componentes de la ventana
-	 */
+	final static int TAM = 6;
+	final static int LIM = 49;
 
-	private JMenuBar menubar; // barra de menu que contendra el resto de menus
-	private JMenu menu; // menu principal
-	private JMenuItem info, salir; // desplegable de informacin y salir
-	private JLabel uno, dos, tres, cuatro, cinco, seis; // textos de los numeros
-	private JTextField c1, c2, c3, c4, c5, c6; // campos de texto
-	private JButton boton; // boton de generar el numero aleatorio
-	private JPanel panel1, panel2, panel3; // paneles
-	private int num = 49; // numeros totales
+	JPanel panel, panelB;
+	JMenuBar menubar;
+	JMenu menu;
+	JMenuItem info, salir;
+
+	int[] nums;
+	JLabel[] labels;
+	JTextField[] tfields;
+
+	JButton boton;
 
 	public Ej02() {
 
-		// establecemos un layout por defecto
-		setLayout(new FlowLayout(FlowLayout.CENTER, 40, 50));
+		setLayout(new FlowLayout(FlowLayout.CENTER, 50, 90)); // margen(ancho, alto)
 
-		// metemos el menu y los diferentes items
+		panel = new JPanel();
+		panel.setLayout(new GridLayout(2, TAM, 15, 8)); // (rows, cols, ancho, alto)
+
+		panelB = new JPanel();
+		panelB.setLayout(new GridLayout(2, 0, 10, 25)); // margen(ancho, alto)
+
+		int ancho = 3;
+
+		labels = new JLabel[TAM];
+		tfields = new JTextField[TAM];
+
+		for (int i = 0; i < labels.length; i++) {
+			labels[i] = new JLabel(i + 1 + "");
+			labels[i].setFont(new Font("Arial", Font.PLAIN, 12));
+			labels[i].setForeground(Color.GRAY);
+			labels[i].setHorizontalAlignment(0);
+			panel.add(labels[i]);
+		}
+
+		for (int i = 0; i < tfields.length; i++) {
+			tfields[i] = new JTextField(ancho);
+			tfields[i].setHorizontalAlignment(0);
+			panel.add(tfields[i]);
+		}
+
+		boton = new JButton("Generar números"); // new ImageIcon("D:\\PR\\ ... ")
+		boton.addActionListener(this); // implements ActionListener
+
+		panelB.add(panel);
+		panelB.add(boton);
+
+		// creamos el JMenuBar y lo asociamos con el JFrame
 		menubar = new JMenuBar();
 		setJMenuBar(menubar);
 
-		menu = new JMenu("Menu");
+		// creamos el JMenu y lo añadimos al JMenuBar
+		menu = new JMenu("Menú");
 		menubar.add(menu);
 
+		// creamos los item y los asociamos al JMenu
 		info = new JMenuItem("Info");
 		menu.add(info);
 		info.addActionListener(this);
@@ -52,126 +84,99 @@ public class Ej02 extends JFrame implements ActionListener {
 		menu.add(salir);
 		salir.addActionListener(this);
 
-		// etablecemos el panel 3 que contiene los otros dos paneles
-		panel3 = new JPanel();
-		panel3.setLayout(new GridLayout(2, 1, 0, 20));
-		add(panel3);
-
-		panel1 = new JPanel();
-		panel1.setLayout(new GridLayout(2, 6, 25, 2));
-		panel3.add(panel1);
-
-		// creamos y establecemos los labels y añadimos al panel 1
-
-		uno = new JLabel("1", JLabel.CENTER);
-		uno.setFont(new Font("", Font.ITALIC, 12));
-		panel1.add(uno);
-
-		dos = new JLabel("2", JLabel.CENTER);
-		dos.setFont(new Font("", Font.ITALIC, 12));
-		panel1.add(dos);
-
-		tres = new JLabel("3", JLabel.CENTER);
-		tres.setFont(new Font("", Font.ITALIC, 12));
-		panel1.add(tres);
-
-		cuatro = new JLabel("4", JLabel.CENTER);
-		cuatro.setFont(new Font("", Font.ITALIC, 12));
-		panel1.add(cuatro);
-
-		cinco = new JLabel("5", JLabel.CENTER);
-		cinco.setFont(new Font("", Font.ITALIC, 12));
-		panel1.add(cinco);
-
-		seis = new JLabel("6", JLabel.CENTER);
-		seis.setFont(new Font("", Font.ITALIC, 12));
-		panel1.add(seis);
-
-		// añadimos los camposs de texto al panel 1
-		c1 = new JTextField(2);
-		panel1.add(c1);
-
-		c2 = new JTextField(2);
-		panel1.add(c2);
-
-		c3 = new JTextField(2);
-		panel1.add(c3);
-
-		c4 = new JTextField(2);
-		panel1.add(c4);
-
-		c5 = new JTextField(2);
-		panel1.add(c5);
-
-		c6 = new JTextField(2);
-		panel1.add(c6);
-
-		// añadimos y cremos el panel 2 y le establecemos un Layout
-		// Borderlayout
-		panel2 = new JPanel();
-		panel2.setLayout(new BorderLayout());
-		panel3.add(panel2);
-
-		// añadimos el boton al panel 2 y hacemos la llamada
-		// a la funcionalidad del boton
-
-		boton = new JButton("Generar numero");
-		panel2.add(boton);
-		boton.addActionListener(this);
+		add(panelB);
 
 	}
 
 	public static void main(String[] args) {
+		Ej02 v = new Ej02();
 
-		Ej02 e = new Ej02();
+		v.setTitle("Lotería primitiva"); // título de la ventana
+		v.setSize(600, 350); // dimensiones(ancho, alto)
+		v.setLocationRelativeTo(null); // ventana en el centro
+		v.setVisible(true); // visibilidad
+		v.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		e.setVisible(true);
-		e.setSize(400, 300);
-		e.setTitle("Loteria Primitiva");
-		e.setLocationRelativeTo(null);
-		e.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		e.setResizable(false);
-
-	}
-
-	/**
-	 * Funcion que devuelve un numero aleatorio entre u y 49
-	 * 
-	 * @return devuelve un numero entero
-	 */
-	public int aleatorio(int n) {
-
-		return (int) (Math.random() * n + 1);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
-		// Funcionalidad para el boton info
-		// lo cual nos
 		if (e.getSource() == info) {
-			VentanaSec vm = new VentanaSec(this, true);
-			vm.setTitle("Examen de Programacion");
-			vm.setVisible(true);
-
+			VentanaSec vs = new VentanaSec(this, true);
+			vs.setVisible(true);
 		}
 
-		// Funcionalidad del boton de salir
 		if (e.getSource() == salir) {
 			System.exit(0);
 		}
 
-		// Creamos la funcion del boton de generar el aleatorio pasando
-		// string el integer que nos devuelve la funcion
 		if (e.getSource() == boton) {
 
-			c1.setText(String.valueOf(aleatorio(num)));
-			c2.setText(String.valueOf(aleatorio(num)));
-			c3.setText(String.valueOf(aleatorio(num)));
-			c4.setText(String.valueOf(aleatorio(num)));
-			c5.setText(String.valueOf(aleatorio(num)));
-			c6.setText(String.valueOf(aleatorio(num)));
+			for (int i = 0; i < tfields.length; i++) {
+				tfields[i].setText(String.valueOf(aleatorio()));
+			}
+
+			for (int i = 0; i < tfields.length; i++) {
+				while (repetido(tfields, tfields[i].getText(), i)) {
+					tfields[i].setText(String.valueOf(aleatorio()));
+				}
+			}
+
+			burbuja(tfields);
+
 		}
 
+	}
+
+	/**
+	 * función que devuelve números aleatorios
+	 * 
+	 * @return devuelve números aleatorios
+	 */
+	public static int aleatorio() {
+		return (int) (Math.random() * LIM + 1);
+	}
+
+	/**
+	 * método para comprobar si hay un número repetido dentro de un array
+	 * 
+	 * @param tfields2 -> array a la que vamos a realizar el booleano
+	 * @param tfields3 -> valor del que comprobamos si está repetido o no
+	 * @param pos      -> posición de la expresión booleana
+	 * @return devuelve true o false si hay valores repetidos dentro de una array
+	 */
+	public static boolean repetido(JTextField[] tfields2, String tfields3, int pos) {
+
+		for (int i = 0; i < pos; i++) {
+			if (tfields2[i].getText().equals(tfields3)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * método que ordena de menor a mayor un array
+	 * 
+	 * @param tfields2
+	 */
+	public static void burbuja(JTextField[] tfields2) {
+		int aux;
+		boolean ok = false;
+		for (int i = tfields2.length; i > 0; i--) {
+			ok = false;
+			for (int j = 0; j < i - 1; j++) {
+				if (Integer.valueOf(tfields2[j].getText()) > Integer.valueOf(tfields2[j + 1].getText())) {
+					ok = true;
+					aux = Integer.valueOf(tfields2[j + 1].getText());
+					tfields2[j + 1].setText(tfields2[j].getText());
+					tfields2[j].setText(String.valueOf(aux));
+				}
+
+			}
+			if (!ok) {
+				return;
+			}
+		}
 	}
 }
