@@ -18,8 +18,8 @@ import javax.swing.JTextField;
 
 public class Ej02 extends JFrame implements ActionListener {
 
-	final static int TAM = 6;
-	final static int LIM = 49;
+	final static int TAM = 6;  //numero de casillas 
+	final static int LIM = 49; //numeros limites generados
 
 	JPanel panel, panelB;
 	JMenuBar menubar;
