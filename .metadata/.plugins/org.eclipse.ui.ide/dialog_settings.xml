@@ -69,6 +69,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\AdrianV\EjerciciosEclipse"/>
 			<item value="C:\Users\Asun\EjerciciosEclipse"/>
 			<item value="C:\Users\AdrianV\eclipse-workspace\EjerciciosEclipse"/>
 			<item value="C:\Users\Adrian Vincent\EjerciciosEclipse"/>
