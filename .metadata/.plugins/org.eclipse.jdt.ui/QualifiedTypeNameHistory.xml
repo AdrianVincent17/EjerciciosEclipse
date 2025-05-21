@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="actionListener.ConversorDecimalRomanov2"/>
-    <fullyQualifiedTypeName name="actionListener.TecladoNumerico"/>
     <fullyQualifiedTypeName name="java.lang.VerifyError"/>
     <fullyQualifiedTypeName name="componentes.Ventana_JTextfield"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.JobMediaSheetsCompleted"/>
@@ -41,9 +39,6 @@
     <fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
     <fullyQualifiedTypeName name="fecha.Hora"/>
     <fullyQualifiedTypeName name="boletin.VentanaSec"/>
-    <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
-    <fullyQualifiedTypeName name="javax.swing.JMenu"/>
-    <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
     <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
     <fullyQualifiedTypeName name="java.awt.Font"/>
     <fullyQualifiedTypeName name="javax.swing.WindowConstants"/>
@@ -60,4 +55,9 @@
     <fullyQualifiedTypeName name="ejercicios.ForzadoContraseña"/>
     <fullyQualifiedTypeName name="ejercicios.requisitos"/>
     <fullyQualifiedTypeName name="boletin.Ej02"/>
+    <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
+    <fullyQualifiedTypeName name="javax.swing.JMenu"/>
+    <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
+    <fullyQualifiedTypeName name="prueba.Proveedores"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
 </qualifiedTypeNameHistroy>
