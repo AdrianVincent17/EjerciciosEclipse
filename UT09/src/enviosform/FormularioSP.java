@@ -30,51 +30,51 @@ public class FormularioSP extends JFrame implements ActionListener {
 
 	public FormularioSP() {
 
-		setLayout(null);
+		getContentPane().setLayout(null);
 
 		pro = new JLabel("Proveedor: ");
 		pro.setBounds(30, 30, 100, 25);
-		add(pro);
+		getContentPane().add(pro);
 
 		proveedor = new JTextField();
 		proveedor.setBounds(30, 60, 100, 25);
-		add(proveedor);
+		getContentPane().add(proveedor);
 
 		pie = new JLabel("Pieza: ");
-		pie.setBounds(160, 30, 100, 25);
-		add(pie);
+		pie.setBounds(170, 30, 100, 25);
+		getContentPane().add(pie);
 
 		pieza = new JTextField();
-		pieza.setBounds(160, 60, 100, 25);
-		add(pieza);
+		pieza.setBounds(170, 60, 100, 25);
+		getContentPane().add(pieza);
 
 		can = new JLabel("Cantidad: ");
-		can.setBounds(300, 30, 100, 25);
-		add(can);
+		can.setBounds(310, 30, 100, 25);
+		getContentPane().add(can);
 
 		cant = new JTextField();
-		cant.setBounds(300, 60, 100, 25);
-		add(cant);
+		cant.setBounds(310, 60, 100, 25);
+		getContentPane().add(cant);
 
 		guardar = new JButton("Guardar");
 		guardar.setBounds(30, 110, 150, 25);
 		guardar.addActionListener(this);
-		add(guardar);
+		getContentPane().add(guardar);
 
 		borrar = new JButton("Limpiar");
-		borrar.setBounds(249, 110, 150, 25);
+		borrar.setBounds(260, 110, 150, 25);
 		borrar.addActionListener(this);
-		add(borrar);
+		getContentPane().add(borrar);
 
 		listado = new JLabel("Listado de envios: ");
 		listado.setBounds(30, 170, 200, 25);
-		add(listado);
+		getContentPane().add(listado);
 
 		// Creamos la tabla y la insertamos en la ventan
 		tabla = new JTable();
 		sc = new JScrollPane(tabla);
-		sc.setBounds(30, 210, 380, 220);
-		add(sc);
+		sc.setBounds(30, 206, 380, 220);
+		getContentPane().add(sc);
 
 		con = new ConexionSP();
 		con.MostrarSP(tabla);
@@ -99,7 +99,7 @@ public class FormularioSP extends JFrame implements ActionListener {
 		fo.setVisible(true);
 		fo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		fo.setTitle("ENVIOS");
-		fo.setSize(460, 520);
+		fo.setSize(460, 495);
 		fo.setLocationRelativeTo(null);
 
 	}
