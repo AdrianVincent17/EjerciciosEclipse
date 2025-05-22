@@ -115,7 +115,13 @@ public class ConexionSP {
 
 			pst.setString(1, pro);
 			pst.setString(2, pie);
-			pst.setInt(3, Integer.parseInt(cant));
+
+			// el campo peso acepta nulos
+			if (cant.isEmpty()) {
+				pst.setString(3, null);
+			} else {
+				pst.setInt(3, Integer.parseInt(cant));
+			}
 
 			pst.executeUpdate();
 			pst.close();

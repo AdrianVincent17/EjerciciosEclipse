@@ -42,7 +42,7 @@ public class EnviosTabla extends JFrame {
 		p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		p.setVisible(true);
 		p.pack();
-		p.setTitle("PIEZAS");
+		p.setTitle("ENVIOS");
 
 	}
 

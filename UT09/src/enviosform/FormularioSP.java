@@ -32,52 +32,48 @@ public class FormularioSP extends JFrame implements ActionListener {
 
 		setLayout(null);
 
-		nueva = new JLabel("Introduce un nuevo envio: ");
-		nueva.setBounds(30, 20, 200, 25);
-		add(nueva);
-
 		pro = new JLabel("Proveedor: ");
-		pro.setBounds(30, 60, 60, 25);
+		pro.setBounds(30, 30, 100, 25);
 		add(pro);
 
 		proveedor = new JTextField();
-		proveedor.setBounds(90, 60, 100, 25);
+		proveedor.setBounds(30, 60, 100, 25);
 		add(proveedor);
 
 		pie = new JLabel("Pieza: ");
-		pie.setBounds(220, 60, 60, 25);
+		pie.setBounds(160, 30, 100, 25);
 		add(pie);
 
 		pieza = new JTextField();
-		pieza.setBounds(280, 60, 100, 25);
+		pieza.setBounds(160, 60, 100, 25);
 		add(pieza);
 
 		can = new JLabel("Cantidad: ");
-		can.setBounds(30, 100, 60, 25);
+		can.setBounds(300, 30, 100, 25);
 		add(can);
 
 		cant = new JTextField();
-		cant.setBounds(90, 100, 100, 25);
+		cant.setBounds(300, 60, 100, 25);
 		add(cant);
 
 		guardar = new JButton("Guardar");
-		guardar.setBounds(90, 160, 130, 25);
+		guardar.setBounds(30, 110, 150, 25);
 		guardar.addActionListener(this);
 		add(guardar);
 
-		borrar = new JButton("Borrar");
-		borrar.setBounds(250, 160, 130, 25);
+		borrar = new JButton("Limpiar");
+		borrar.setBounds(249, 110, 150, 25);
 		borrar.addActionListener(this);
 		add(borrar);
 
 		listado = new JLabel("Listado de envios: ");
-		listado.setBounds(30, 210, 200, 25);
+		listado.setBounds(30, 170, 200, 25);
 		add(listado);
 
 		// Creamos la tabla y la insertamos en la ventan
 		tabla = new JTable();
 		sc = new JScrollPane(tabla);
-		sc.setBounds(30, 240, 360, 130);
+		sc.setBounds(30, 210, 380, 220);
 		add(sc);
 
 		con = new ConexionSP();
@@ -103,7 +99,7 @@ public class FormularioSP extends JFrame implements ActionListener {
 		fo.setVisible(true);
 		fo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		fo.setTitle("ENVIOS");
-		fo.setSize(450, 420);
+		fo.setSize(460, 520);
 		fo.setLocationRelativeTo(null);
 
 	}
@@ -124,8 +120,8 @@ public class FormularioSP extends JFrame implements ActionListener {
 				String canti = String.valueOf(cant.getText());
 
 				// Comprobamos si los campos obligatorios estan vacios
-				if (prov.isEmpty() || piez.isEmpty() || canti.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Los campos no pueden estar en blanco", "Aviso",
+				if (prov.isEmpty() || piez.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Los campos proveedor y pieza son obligatorios", "Aviso",
 							JOptionPane.WARNING_MESSAGE);
 				} else {
 					// Establecemos conexion para inserta el nuevo registro en la base de datos
